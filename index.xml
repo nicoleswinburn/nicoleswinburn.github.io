@@ -21,12 +21,12 @@
     </item>
     
     <item>
-      <title>Instalar Tema</title>
-      <link>https://nicoleswinburn.github.io/docs/instalar-tema/</link>
+      <title>02 Mecanizado CNC Silla Fresia</title>
+      <link>https://nicoleswinburn.github.io/docs/02-mecanizado-cnc-silla-fresia/</link>
       <pubDate>Wed, 17 Jun 2020 19:30:08 +1000</pubDate>
       
-      <guid>https://nicoleswinburn.github.io/docs/instalar-tema/</guid>
-      <description>Tutorial de intalación del tema utilizando el Framework Hugo.</description>
+      <guid>https://nicoleswinburn.github.io/docs/02-mecanizado-cnc-silla-fresia/</guid>
+      <description>Utilización de Mecanizado CNC para obtener las piezas de la Silla Fresia sin tener que modelarla desde cero.</description>
     </item>
     
     <item>
@@ -48,21 +48,21 @@
     </item>
     
     <item>
+      <title>Instalar Tema</title>
+      <link>https://nicoleswinburn.github.io/docs/instalar-tema/</link>
+      <pubDate>Wed, 17 Jun 2020 19:30:08 +1000</pubDate>
+      
+      <guid>https://nicoleswinburn.github.io/docs/instalar-tema/</guid>
+      <description>Tutorial de intalación del tema utilizando el Framework Hugo.</description>
+    </item>
+    
+    <item>
       <title>Ejemplos Markdown</title>
       <link>https://nicoleswinburn.github.io/docs/markdown/</link>
       <pubDate>Wed, 17 Jun 2020 19:30:08 +1000</pubDate>
       
       <guid>https://nicoleswinburn.github.io/docs/markdown/</guid>
       <description>Ejemplos de uso de lenguaje Markdown para redactar las publicaciones.</description>
-    </item>
-    
-    <item>
-      <title>Objetivos del Curso</title>
-      <link>https://nicoleswinburn.github.io/docs/objetivos/</link>
-      <pubDate>Wed, 17 Jun 2020 19:30:08 +1000</pubDate>
-      
-      <guid>https://nicoleswinburn.github.io/docs/objetivos/</guid>
-      <description>Objetivos general y específico del Taller del segundo trimestre de 2020.</description>
     </item>
     
   </channel>

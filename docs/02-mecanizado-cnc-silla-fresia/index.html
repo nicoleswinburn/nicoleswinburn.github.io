@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>02 Mecanizado CNC Silla Fresia - Nicole Swinburn</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <link rel="icon" href="https://nicoleswinburn.github.io/favicon.png">
+
+  
+  
+  <link rel="stylesheet" href="/css/style.min.df52c7c8fb17040fdfb216293b7a711034ee517647a54f8a626ea24f0382f02b.css">
+  
+
+  
+
+</head>
+
+<body class='page page-default-single'>
+  <div id="main-menu-mobile" class="main-menu-mobile">
+  <ul>
+    
+    
+    <li class="menu-item-inicio">
+      <a href="/">
+        <span>Inicio</span>
+      </a>
+    </li>
+    
+    <li class="menu-item-documentación">
+      <a href="/docs/">
+        <span>Documentación</span>
+      </a>
+    </li>
+    
+  </ul>
+</div>
+  <div class="wrapper">
+    <div class='header'>
+  <div class="container">
+    <div class="logo">
+      <a href="https://nicoleswinburn.github.io/"><img alt="Logo" src="/images/logo.png" /></a>
+    </div>
+    <div class="logo-mobile">
+      <a href="https://nicoleswinburn.github.io/"><img alt="Logo" src="/images/logo.png" /></a>
+    </div>
+    <div id="main-menu" class="main-menu">
+  <ul>
+    
+    
+    <li class="menu-item-inicio">
+      <a href="/">
+        <span>Inicio</span>
+      </a>
+    </li>
+    
+    <li class="menu-item-documentación">
+      <a href="/docs/">
+        <span>Documentación</span>
+      </a>
+    </li>
+    
+  </ul>
+</div>
+    <button id="toggle-main-menu-mobile" class="hamburger hamburger--slider" type="button">
+  <span class="hamburger-box">
+    <span class="hamburger-inner"></span>
+  </span>
+</button>
+  </div>
+</div>
+
+
+    
+    
+    
+    
+    
+    
+
+    
+    <div class="container pt-2 pt-md-6 pb-3 pb-md-6">
+      <div class="row">
+        <div class="col-12 col-md-3 mb-3">
+          <div class="sidebar">
+            
+<div class="docs-menu">
+  <h4>Documentación</h4>
+  <ul>
+    
+    <li class="">
+      <a href="https://nicoleswinburn.github.io/docs/01-planimetr%C3%ADas-silla-plywood/">01 Planimetrías Silla Plywood</a>
+    </li>
+    
+    <li class="active ">
+      <a href="https://nicoleswinburn.github.io/docs/02-mecanizado-cnc-silla-fresia/">02 Mecanizado CNC Silla Fresia</a>
+    </li>
+    
+    <li class="">
+      <a href="https://nicoleswinburn.github.io/docs/configuracion/">Configuración</a>
+    </li>
+    
+    <li class="">
+      <a href="https://nicoleswinburn.github.io/docs/ejemplo/">Ejemplo Shortcodes</a>
+    </li>
+    
+    <li class="">
+      <a href="https://nicoleswinburn.github.io/docs/instalar-tema/">Instalar Tema</a>
+    </li>
+    
+    <li class="">
+      <a href="https://nicoleswinburn.github.io/docs/markdown/">Ejemplos Markdown</a>
+    </li>
+    
+  </ul>
+</div>
+
+          </div>
+        </div>
+        <div class="col-12 col-md-9">
+          
+<h1 class="title">02 Mecanizado CNC Silla Fresia</h1>
+<div class="content ">
+  <p>Hoy en día las máquinas no se han quedado atrás con la tecnología y han adaptado los controles numéricos computarizados (CNC), los cuales logran obtener una gran precisión, minimizando el tiempo empleado y aumentando la producción. Con esto, la intervención humana va disminuyendo, ya que la máquina posee funciones como el trazado, fresado, entre otros; todas las herramientas en una sola. Cabe destacar que no presciende totalmente del ser humano, ya que aún es necesario que la máquina sea programada y controlada a través de un software.</p>
+<p>Este proceso de fabricación puede ser utilizado en múltiples industrias, tales como la ferroviaria, la aeronáutica, la naval, entre otras.</p>
+<p><img src="/img/02_cnc_fresia/1_cnc.png" alt="MecanizadoCNC_1"></p>
+<p>Para este encargo realicé el mecanizado de la Silla Fresia con el programa Fusion 360.</p>
+<h2 id="proceso">Proceso</h2>
+<h4 id="piezas-planas">Piezas planas</h4>
+<p>El proceso comienza creando un sketch de 1220 mm x 1220 mm, al cuál se le hará un extrude de 15mm, para simular la plancha donde colocaremos las piezas a mecanizar. Para colocar dichas piezas, las copiamos y las alineamos con el plano horizontal, ubicándolas manualmente en la plancha de manera ordenada sin que se toquen entre ellas.</p>
+<p><img src="/img/02_cnc_fresia/1.png" alt="MecanizadoCNC_1"></p>
+<p>Luego, cambiando el menú de &ldquo;Design&rdquo; a &ldquo;Manufacture&rdquo;, se crea un setup en el cual hay que definir los ejes z (cara superior) y x (borde más cercano a uno y de la cara superior) de la plancha. Además se elige un <strong>box point</strong>, el cual indica donde comienzan las coordenadas para que la máquina las lea. Este último vendría siendo el de la esquina inferior izquierda, pero de la cara superior de la plancha.</p>
+<p><img src="/img/02_cnc_fresia/2.png" alt="MecanizadoCNC_1"></p>
+<p>Aquí comenzamos a mecanizar. Usando la herramienta <strong>2d contour</strong> y se seleccionan los contornos externos de los pequeños orificios que ayudan a la unión de las piezas, como se muestra en la siguiente imagen.</p>
+<p><img src="/img/02_cnc_fresia/3.png" alt="MecanizadoCNC_1"></p>
+<p>En el mismo menú emergente hay varias pestañas, una de las cuales se llama &ldquo;Passes&rdquo;. Dentro de esta, hay que marcar el check en la opción “Multiple Depths” y cambiar el “Maximum Roughing Stepdown” a 3 mm. Esto se realiza para que la fresia haga más pasadas en el mismo lugar y corte todo el grosor de la plancha. Este paso es muy importante porque se repite más adelante.</p>
+<p><img src="/img/02_cnc_fresia/5.png" alt="MecanizadoCNC_1"></p>
+<p>El funcionamiento de esto se puede ver en la siguiente simulación:</p>
+<div>
+    <video 
+    width="100%" 
+    height="450" 
+    autoplay muted loop controls preload>
+    <source src="/img/muestra_inicial.mp4"  type="video/mp4">
+    </video>
+</div>
+<p>Al poner OK, el programa nos dará la opción de elegir la fresia que deseamos utilizar, la cual será: <strong>flat end mill de 6mm de diámetro</strong>.</p>
+<p><img src="/img/02_cnc_fresia/4.png" alt="MecanizadoCNC_1"></p>
+<p>Teniendo listo ese contour, se utiliza el <strong>2D Pocket</strong> seleccionando las caras pequeñas que se ven en la imagen (Aquí es cuando se repite el paso mencionado más arriba y se coloca multiple depths en 3 mm). Este paso se realiza para lograr un rebaje del área.</p>
+<p><img src="/img/02_cnc_fresia/6.png" alt="MecanizadoCNC_1"></p>
+<p>Con el paso anterior concluido, lo que sigue es hacer un nuevo <strong>contour 2d</strong> y se selecciona el área exterior de todas las piezas para cortarlas de la plancha, este vendría siendo el corte final. Nuevamente repetimos el paso de hacer click en la pestaña &ldquo;Passes&rdquo; para darle 3 mm de multiple depths.</p>
+<p><img src="/img/02_cnc_fresia/7.png" alt="MecanizadoCNC_1"></p>
+<p>Antes de finalizar el paso anterior, es importante considerar que cuando estemos cortando la pieza y esta esté terminando el mecanizado, al estar cada vez más suelta comenzará a vibrar y la fresia probablemente haga un corte que rompa la pieza. Es por esto que hay que agregarle tabs que afirmen la pieza a la plancha. Esto se hace en la pestaña &ldquo;geometría&rdquo;, check en comando &ldquo;tabs&rdquo;. Se aumenta un poco el &ldquo;tab height&rdquo; de 1.5 mm a 3 mm para que no sea tan pequeño, y la distancia entre tab y tab se agranda de 48 mm a 350 mm, porque no es necesario que hayan tantos y tan juntos.</p>
+<p><img src="/img/02_cnc_fresia/8.png" alt="MecanizadoCNC_1"></p>
+<p>Considerar que en las piezas más pequeñas hay que poner una separación menor (100mm) ya que si el número es muy grande, los tabs tienden a desaparecer (no hay suficiente espacio para que hayan tabs).</p>
+<p><img src="/img/02_cnc_fresia/9.png" alt="MecanizadoCNC_1"></p>
+<p>Con esto finaliza el mecanizado de las piezas planas. Se puede simular el uso de la máquina en el programa cuyo video está adjunto más adelante en el apartado <em>Video Final</em>.</p>
+<h4 id="asiento-pieza-curva">Asiento (pieza curva)</h4>
+<p>Para el asiento es prácticamente el mismo proceso inicial: se crea un sketch (aunque el grosor en este caso es 9 mm), se crea el setup, se definen los ejes de las coordenadas y comienza el mecanizado. Con la herramienta <strong>2d contour</strong> se selecciona el contorno externo de la pieza, se ajustan los tabs y se elige la fresia (en este caso se utilizó la misma en todo el proceso).</p>
+<p><img src="/img/02_cnc_fresia/14.png" alt="MecanizadoCNC_1"></p>
+<p>Y ahora viene una herramienta nueva: en la pestaña &ldquo;2d&rdquo; se selecciona &ldquo;Trace&rdquo;. El siguiente paso es ir seleccionando todas las líneas del layout del asiento y lo que hará la fresia será crear un trazo de un espesor. Luego, en la pestaña &ldquo;Passes&rdquo; se selecciona la opción &ldquo;Stock to leave&rdquo;, para que quede material de base y no se recorte por completo. Este último se deja en 4,5 mm.</p>
+<p><img src="/img/02_cnc_fresia/15.png" alt="MecanizadoCNC_1"></p>
+<p>Como se muestra en la siguiente imagen, el trayecto de la fresia no será un corte completo hacia abajo, sino que llegará hasta la mitad de la plancha. Todo esto ayudará a a la flexibilidad de la pieza para que luego esta sea curva.</p>
+<p><img src="/img/02_cnc_fresia/16.png" alt="MecanizadoCNC_1"></p>
+<p>Para finalizar, una última imagen del asiento en vista top donde se pueden apreciar los cortes no profundos mencionados anteriormente, y los tabs que mantienen la pieza en su sitio mientras esta es mecanizada.</p>
+<p><img src="/img/02_cnc_fresia/17.png" alt="MecanizadoCNC_1"></p>
+<h2 id="video-final">Video final</h2>
+<p>En estos dos videos se ve el proceso de mecanizado explicado en el apartado anterior, grabado en cámara rápida. El primero corresponde a las piezas planas y el segundo al asiento curvo.</p>
+<div>
+    <video 
+    width="100%" 
+    height="450" 
+    autoplay muted loop controls preload>
+    <source src="/img/FINAL_piezasacelerado.mp4"  type="video/mp4">
+    </video>
+</div>
+<div>
+    <video 
+    width="100%" 
+    height="450" 
+    autoplay muted loop controls preload>
+    <source src="/img/Asiento.mp4"  type="video/mp4">
+    </video>
+</div>
+<h2 id="modelo-3d">Modelo 3D</h2>
+<p>Aquí se presenta el modelo 3D de la Silla Fresia y, a un lado, las piezas separadas para pasar por el proceso de mecanizado cnc.</p>
+<div>
+    <iframe 
+    src="https://alumnos2147.autodesk360.com/shares/public/SH56a43QTfd62c1cd9682dae222f7dd30621?mode=embed" 
+    width="100%" 
+    height="450" 
+    allowfullscreen="true" 
+    webkitallowfullscreen="true" 
+    mozallowfullscreen="true"  
+    frameborder="0">
+    </iframe>    
+</div>
+
+
+
+</div>
+</div>
+
+        </div>
+      </div>
+    </div>
+    
+  </div>
+
+  <div class="sub-footer">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <div class="sub-footer-inner">
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+  
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/scripts.min.1237ff71925bb8625c97a9af8db4c54525258bedfd7c47493daaff723bea755e.js"></script>
+  
+
+  
+  
+  
+    
+  
+
+
+</body>
+
+</html>
