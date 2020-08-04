@@ -123,34 +123,60 @@
           
 <h1 class="title">03 Mecanizado CNC 2.5D - Respaldo</h1>
 <div class="content ">
-  <!-- raw HTML omitted -->
-<h2 id="highlighting-de-código">Highlighting de Código</h2>
-<p>Este tema utiliza el resaltado de código incorporado que se incluye con Hugo. <a href="https://gohugo.io/content-management/syntax-highlighting/">https://gohugo.io/content-management/syntax-highlighting/</a></p>
-<p>Puede insertar fragmentos de código en cualquier Markdown utilizando la sintaxis de highlighting, es decir:</p>
-<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">```
-insertar código acá
-```
-</code></pre></div><p>Puede especificar el lenguaje de programación agregando una declaración después de los backticks</p>
-<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">```html
-insertar código acá
-```
-</code></pre></div><h3 id="opciones-de-resaltado-de-código">Opciones de resaltado de código</h3>
-<p>Las opciones de resaltado de código se configuran en <code>config.toml</code></p>
-<div class="highlight"><pre class="chroma"><code class="language-toml" data-lang="toml"><span class="nx">pygmentsCodeFences</span> <span class="p">=</span> <span class="kc">true</span>
-<span class="nx">pygmentsCodefencesGuessSyntax</span> <span class="p">=</span> <span class="kc">true</span>
-<span class="nx">pygmentsUseClasses</span> <span class="p">=</span> <span class="kc">true</span>
-</code></pre></div><h2 id="menú-principal">Menú principal</h2>
-<p>Configure el menú principal editando el <code>config.toml</code></p>
-<div class="highlight"><pre class="chroma"><code class="language-toml" data-lang="toml"><span class="p">[[</span><span class="nx">menu</span><span class="p">.</span><span class="nx">main</span><span class="p">]]</span>
-    <span class="nx">name</span> <span class="p">=</span> <span class="s2">&#34;Inicio&#34;</span>
-    <span class="nx">url</span> <span class="p">=</span> <span class="s2">&#34;/&#34;</span>
-    <span class="nx">weight</span> <span class="p">=</span> <span class="mi">1</span>
+  <p>El mecanizado CNC 2.5D, es decir, en 2 ejes y medio, se define así ya que solo permite un único valor máximo de profundidad (eje z) en cada punto en el plano x, y. En otras palabras, consiste en la utilización de los tres ejes (X, Y y Z), pero no simultáneamente. Primero el eje Z se ubica a cierta profundidad y luego se realiza el corte en los otros dos ejes (X e Y). Luego el eje Z se retrae y el X con el Y se devuelven al punto de inicio. Y así se va repitiendo hasta completar la operación.</p>
+<p>En este tipo de trabajo, las superficies finales obtenidas son todas normales o paralelas al eje de la herramienta, no se permite una superficie desformada. Por ejemplo, una interpolación de hélice (movimiento del cutter siguiendo la forma de una hélice) en un contorno, está moviendo continuamente la herramienta a lo largo de los 3 ejes, pero la superficie resultante sigue siendo una pared vertical con un fondo plano: todavía estamos en un mundo 2.5D.</p>
+<p>Este tipo de mecanizado puede utilizarse para la generación de ranuras, perfilados, cajeras, entre otros. Además, se pueden realizar grabados de texto y elementos artísticos sobre áreas planas.</p>
+<p><img src="/img/02_cnc_fresia/proceso_fisico/procesofisico3.jpg" alt="MecanizadoCNC_respaldo"></p>
+<hr>
+<h2 id="por-qué-25d-y-no-3d">¿Por qué 2.5D y no 3D?</h2>
+<p>A diferencia del 2.5D, el mecanizado en tres dimensiones tiene la capacidad de movilizar los tres ejes de manera simultánea, creando curvas en un corte helicoidal, por lo que este tipo de fresado se utiliza cuando se busca obtener un resultado de una complejidad mayor.</p>
+<p>Pero principalmente 2.5D vs 3D es realmente algo más sobre las diferencias entre los software CAM, ya que prácticamente todas las máquinas pueden hacer el trabajo en 3 ejes.</p>
+<p><a href="#top">▲ Volver Arriba</a></p>
+<hr>
+<h2 id="proceso-de-mecanizado">Proceso de mecanizado</h2>
+<p><a href="#top">▲ Volver Arriba</a></p>
+<hr>
+<h2 id="optimización-de-los-tiempos">Optimización de los tiempos</h2>
+<p>Una de las soluciones más famosas para optimizar el tiempo de mecanizado de una máquina, fue propuesta por la empresa SolidCAM, la cual diseñó desde cero el CAM iMachining, el software utilizado para todas las aplicaciones CNC.</p>
+<p>Este nuevo diseño permite ahorrar hasta un 70% del tiempo de mecanizado CNC y, además, disminuye el desgaste de la máquina y sus herramientas, aumentando la vida útil de estas entre 2 y 3 veces.</p>
+<p>Algo muy positivo a destacar, es que el interface del software te permite observar de manera detallada lo que se va a mecanizar y, además, permite identificar a tiempo cualquier movimiento extraño o colisión antes de llevarlo a la máquina de manera física.</p>
+<p>Esta experiencia simplificada posee una experiencia del usuario muy alta, generando trayectorias optimizadas, con un corte eficiente de la pieza y con altas tasas de arranque de material.</p>
+<p>Por otro lado, reduce de gran manera las tensiones mecánicas y térmicas sufridas por la pieza en el proceso, en comparación con el fresado convencional.</p>
+<p>A diferencia de otros programas CAM del mercado, en este el usuario es quién debe especificar las condiciones de corte, produndidad de pasada, velocidad, entre otros.</p>
+<p>También posee un asistente que calcula las condiciones de corte para ayudar al operario a mecanizar de forma más rápida. Antes el operario tenía que hacerlo por sí solo y muchas veces no se consideraban variables importantes ni se sincronizaban bien los datos, evitando así que los resultados fueran los óptimos.</p>
+<p>Estos y muchas otros beneficios tiene este software completamente actualizado, permitiendo a todos los mecanizadores que lo poseen ahorrarse una gran cantidad de su tiempo en este proceso.</p>
+<p><em>Fuente: <a href="https://www.interempresas.net/MetalMecanica/Articulos/100403-iMachining-el-CAM-que-reduce-hasta-el-70-por-ciento-el-tiempo-de-mecanizado.html">https://www.interempresas.net/MetalMecanica/Articulos/100403-iMachining-el-CAM-que-reduce-hasta-el-70-por-ciento-el-tiempo-de-mecanizado.html</a></em></p>
+<p><a href="#top">▲ Volver Arriba</a></p>
+<hr>
+<h2 id="modelo-3d">Modelo 3D</h2>
+<p>Aquí se presenta el modelo 3D del respaldo de la Silla Fresia.</p>
+<div>
+    <iframe 
+    src="https://alumnos2147.autodesk360.com/shares/public/SH56a43QTfd62c1cd9682dae222f7dd30621?mode=embed" 
+    width="100%" 
+    height="450" 
+    allowfullscreen="true" 
+    webkitallowfullscreen="true" 
+    mozallowfullscreen="true"  
+    frameborder="0">
+    </iframe>    
+</div>
 
-<span class="p">[[</span><span class="nx">menu</span><span class="p">.</span><span class="nx">main</span><span class="p">]]</span>
-    <span class="nx">name</span> <span class="p">=</span> <span class="s2">&#34;Documentación&#34;</span>
-    <span class="nx">url</span> <span class="p">=</span> <span class="s2">&#34;/docs/&#34;</span>
-    <span class="nx">weight</span> <span class="p">=</span> <span class="mi">2</span>
-</code></pre></div>
+
+<p><a href="#top">▲ Volver Arriba</a></p>
+<hr>
+<h2 id="proceso-físico-en-el-fablab">Proceso físico en el FabLab</h2>
+<p><img src="/img/02_cnc_fresia/proceso_fisico/procesofisico2.jpg" alt="MecanizadoCNC_respaldo2">
+<img src="/img/02_cnc_fresia/proceso_fisico/procesofisico3.jpg" alt="MecanizadoCNC_respaldo3">
+<img src="/img/02_cnc_fresia/proceso_fisico/procesofisico4.jpg" alt="MecanizadoCNC_respaldo4">
+<img src="/img/02_cnc_fresia/proceso_fisico/procesofisico5.jpg" alt="MecanizadoCNC_respaldo5">
+<img src="/img/02_cnc_fresia/proceso_fisico/procesofisico6.jpg" alt="MecanizadoCNC_respaldo6">
+<img src="/img/02_cnc_fresia/proceso_fisico/procesofisico15.jpg" alt="MecanizadoCNC_respaldo15">
+<img src="/img/02_cnc_fresia/proceso_fisico/procesofisico16.jpg" alt="MecanizadoCNC_respaldo16">
+<img src="/img/02_cnc_fresia/proceso_fisico/procesofisico22.jpg" alt="MecanizadoCNC_respaldo22">
+<img src="/img/02_cnc_fresia/proceso_fisico/procesofisico17.jpg" alt="MecanizadoCNC_respaldo17"></p>
+<p><a href="#top">▲ Volver Arriba</a></p>
+
 </div>
 </div>
 
