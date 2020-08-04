@@ -99,7 +99,7 @@
     </li>
     
     <li class="">
-      <a href="https://nicoleswinburn.github.io/docs/configuracion/">Configuración</a>
+      <a href="https://nicoleswinburn.github.io/docs/configuracion/">03 Mecanizado CNC 2.5D - Respaldo</a>
     </li>
     
     <li class="">
@@ -126,14 +126,29 @@
   <p>Hoy en día las máquinas no se han quedado atrás con la tecnología y han adaptado los controles numéricos computarizados (CNC), los cuales logran obtener una gran precisión, minimizando el tiempo empleado y aumentando la producción. Con esto, la intervención humana va disminuyendo, ya que la máquina posee funciones como el trazado, fresado, entre otros; todas las herramientas en una sola. Cabe destacar que no presciende totalmente del ser humano, ya que aún es necesario que la máquina sea programada y controlada a través de un software.</p>
 <p>Este proceso de fabricación puede ser utilizado en múltiples industrias, tales como la ferroviaria, la aeronáutica, la naval, entre otras.</p>
 <p><img src="/img/02_cnc_fresia/1_cnc.png" alt="MecanizadoCNC_1"></p>
-<p>Para este encargo realicé el mecanizado de la Silla Fresia con el programa Fusion 360.</p>
-<h2 id="proceso">Proceso</h2>
+<p>Para este encargo se realizó el mecanizado de la Silla Fresia con el programa Fusion 360.</p>
+<hr>
+<h2 id="planimetrías">Planimetrías</h2>
+<h4 id="distintas-vistas-y-cotas">Distintas vistas y cotas</h4>
+<p><img src="/img/02_cnc_fresia/planimetrias/planimetrias-01.png" alt="Planimetrias1"></p>
+<h4 id="vista-isométrica">Vista isométrica</h4>
+<p><img src="/img/02_cnc_fresia/planimetrias/planimetrias-02.png" alt="Planimetrias2"></p>
+<h4 id="detalle-ensamblaje-piezas">Detalle ensamblaje piezas</h4>
+<p><img src="/img/02_cnc_fresia/planimetrias/detalle-01.png" alt="Detalle1"></p>
+<h4 id="piezas">Piezas</h4>
+<p><img src="/img/02_cnc_fresia/planimetrias/planimetrias-03.png" alt="Planimetrias3"></p>
+<p><em>Personalmente utilicé el material <strong>Cherry Wood</strong> debido a que al importar la silla en el programa no se mostraba material alguno. Tengo entendido que su material original es <strong>Oak</strong>.</em></p>
+<p><a href="#top">▲ Volver Arriba</a></p>
+<hr>
+<h2 id="proceso-de-mecanizado">Proceso de mecanizado</h2>
 <h4 id="piezas-planas">Piezas planas</h4>
 <p>El proceso comienza creando un sketch de 1220 mm x 1220 mm, al cuál se le hará un extrude de 15mm, para simular la plancha donde colocaremos las piezas a mecanizar. Para colocar dichas piezas, las copiamos y las alineamos con el plano horizontal, ubicándolas manualmente en la plancha de manera ordenada sin que se toquen entre ellas.</p>
 <p><img src="/img/02_cnc_fresia/1.png" alt="MecanizadoCNC_1"></p>
 <p>Luego, cambiando el menú de &ldquo;Design&rdquo; a &ldquo;Manufacture&rdquo;, se crea un setup en el cual hay que definir los ejes z (cara superior) y x (borde más cercano a uno y de la cara superior) de la plancha. Además se elige un <strong>box point</strong>, el cual indica donde comienzan las coordenadas para que la máquina las lea. Este último vendría siendo el de la esquina inferior izquierda, pero de la cara superior de la plancha.</p>
 <p><img src="/img/02_cnc_fresia/2.png" alt="MecanizadoCNC_1"></p>
-<p>Aquí comenzamos a mecanizar. Usando la herramienta <strong>2d contour</strong> y se seleccionan los contornos externos de los pequeños orificios que ayudan a la unión de las piezas, como se muestra en la siguiente imagen.</p>
+<h6 id="mecanizado-interior">Mecanizado Interior</h6>
+<p>¿Qué quiere decir mecanizado interior? Se refiere al corte que se realiza en las partes interiores de las piezas, creando orificios para facilitar el ensamblaje entre piezas. La forma de dichos agujeros se deben a que la máquina no puede hacer ángulos de 90° por dentro y por eso realiza un calado formando 4 orejas alrededor en los costados.</p>
+<p>Siguiendo con el proceso, aquí comenzamos a mecanizar. Usando la herramienta <strong>2d contour</strong> y se seleccionan los contornos externos de los pequeños orificios mencionados anteriormente, como se muestra en la siguiente imagen.</p>
 <p><img src="/img/02_cnc_fresia/3.png" alt="MecanizadoCNC_1"></p>
 <p>En el mismo menú emergente hay varias pestañas, una de las cuales se llama &ldquo;Passes&rdquo;. Dentro de esta, hay que marcar el check en la opción “Multiple Depths” y cambiar el “Maximum Roughing Stepdown” a 3 mm. Esto se realiza para que la fresia haga más pasadas en el mismo lugar y corte todo el grosor de la plancha. Este paso es muy importante porque se repite más adelante.</p>
 <p><img src="/img/02_cnc_fresia/5.png" alt="MecanizadoCNC_1"></p>
@@ -150,6 +165,8 @@
 <p><img src="/img/02_cnc_fresia/4.png" alt="MecanizadoCNC_1"></p>
 <p>Teniendo listo ese contour, se utiliza el <strong>2D Pocket</strong> seleccionando las caras pequeñas que se ven en la imagen (Aquí es cuando se repite el paso mencionado más arriba y se coloca multiple depths en 3 mm). Este paso se realiza para lograr un rebaje del área.</p>
 <p><img src="/img/02_cnc_fresia/6.png" alt="MecanizadoCNC_1"></p>
+<h6 id="mecanizado-exterior">Mecanizado Exterior</h6>
+<p>¿Qué quiere decir mecanizado exterior? Se refiere al corte que se realiza en las partes exteriores de las piezas, es decir, el contorno o silueta de cada pieza.</p>
 <p>Con el paso anterior concluido, lo que sigue es hacer un nuevo <strong>contour 2d</strong> y se selecciona el área exterior de todas las piezas para cortarlas de la plancha, este vendría siendo el corte final. Nuevamente repetimos el paso de hacer click en la pestaña &ldquo;Passes&rdquo; para darle 3 mm de multiple depths.</p>
 <p><img src="/img/02_cnc_fresia/7.png" alt="MecanizadoCNC_1"></p>
 <p>Antes de finalizar el paso anterior, es importante considerar que cuando estemos cortando la pieza y esta esté terminando el mecanizado, al estar cada vez más suelta comenzará a vibrar y la fresia probablemente haga un corte que rompa la pieza. Es por esto que hay que agregarle tabs que afirmen la pieza a la plancha. Esto se hace en la pestaña &ldquo;geometría&rdquo;, check en comando &ldquo;tabs&rdquo;. Se aumenta un poco el &ldquo;tab height&rdquo; de 1.5 mm a 3 mm para que no sea tan pequeño, y la distancia entre tab y tab se agranda de 48 mm a 350 mm, porque no es necesario que hayan tantos y tan juntos.</p>
@@ -166,6 +183,8 @@
 <p><img src="/img/02_cnc_fresia/16.png" alt="MecanizadoCNC_1"></p>
 <p>Para finalizar, una última imagen del asiento en vista top donde se pueden apreciar los cortes no profundos mencionados anteriormente, y los tabs que mantienen la pieza en su sitio mientras esta es mecanizada.</p>
 <p><img src="/img/02_cnc_fresia/17.png" alt="MecanizadoCNC_1"></p>
+<p><a href="#top">▲ Volver Arriba</a></p>
+<hr>
 <h2 id="video-final">Video final</h2>
 <p>En estos dos videos se ve el proceso de mecanizado explicado en el apartado anterior, grabado en cámara rápida. El primero corresponde a las piezas planas y el segundo al asiento curvo.</p>
 <div>
@@ -184,6 +203,8 @@
     <source src="/img/Asiento.mp4"  type="video/mp4">
     </video>
 </div>
+<p><a href="#top">▲ Volver Arriba</a></p>
+<hr>
 <h2 id="modelo-3d">Modelo 3D</h2>
 <p>Aquí se presenta el modelo 3D de la Silla Fresia y, a un lado, las piezas separadas para pasar por el proceso de mecanizado cnc.</p>
 <div>
@@ -199,6 +220,428 @@
 </div>
 
 
+<p><a href="#top">▲ Volver Arriba</a></p>
+<hr>
+<h2 id="proceso-mecanizado-cnc-en-fablab">Proceso mecanizado CNC en FabLab</h2>
+<p>
+<link rel="stylesheet" href="/css/hugo-easy-gallery.css" />
+
+<div class="gallery caption-position-bottom caption-effect-slide hover-effect-zoom hover-transition" itemscope itemtype="http://schema.org/ImageGallery">
+				<div class="box">
+				  <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+				    <div class="img" style="background-image: url('https://nicoleswinburn.github.io//img/02_cnc_fresia/proceso_fisico//procesofisico1.jpg');" >
+				      <img itemprop="thumbnail" src="https://nicoleswinburn.github.io//img/02_cnc_fresia/proceso_fisico//procesofisico1.jpg" alt="Procesofisico1" />
+				    </div>
+			      <figcaption>
+		          <p>Procesofisico1</p>
+			      </figcaption>
+				    <a href="https://nicoleswinburn.github.io//img/02_cnc_fresia/proceso_fisico//procesofisico1.jpg" itemprop="contentUrl"></a>
+				  </figure>
+				</div>
+				<div class="box">
+				  <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+				    <div class="img" style="background-image: url('https://nicoleswinburn.github.io//img/02_cnc_fresia/proceso_fisico//procesofisico10.jpg');" >
+				      <img itemprop="thumbnail" src="https://nicoleswinburn.github.io//img/02_cnc_fresia/proceso_fisico//procesofisico10.jpg" alt="Procesofisico10" />
+				    </div>
+			      <figcaption>
+		          <p>Procesofisico10</p>
+			      </figcaption>
+				    <a href="https://nicoleswinburn.github.io//img/02_cnc_fresia/proceso_fisico//procesofisico10.jpg" itemprop="contentUrl"></a>
+				  </figure>
+				</div>
+				<div class="box">
+				  <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+				    <div class="img" style="background-image: url('https://nicoleswinburn.github.io//img/02_cnc_fresia/proceso_fisico//procesofisico11.jpg');" >
+				      <img itemprop="thumbnail" src="https://nicoleswinburn.github.io//img/02_cnc_fresia/proceso_fisico//procesofisico11.jpg" alt="Procesofisico11" />
+				    </div>
+			      <figcaption>
+		          <p>Procesofisico11</p>
+			      </figcaption>
+				    <a href="https://nicoleswinburn.github.io//img/02_cnc_fresia/proceso_fisico//procesofisico11.jpg" itemprop="contentUrl"></a>
+				  </figure>
+				</div>
+				<div class="box">
+				  <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+				    <div class="img" style="background-image: url('https://nicoleswinburn.github.io//img/02_cnc_fresia/proceso_fisico//procesofisico12.jpg');" >
+				      <img itemprop="thumbnail" src="https://nicoleswinburn.github.io//img/02_cnc_fresia/proceso_fisico//procesofisico12.jpg" alt="Procesofisico12" />
+				    </div>
+			      <figcaption>
+		          <p>Procesofisico12</p>
+			      </figcaption>
+				    <a href="https://nicoleswinburn.github.io//img/02_cnc_fresia/proceso_fisico//procesofisico12.jpg" itemprop="contentUrl"></a>
+				  </figure>
+				</div>
+				<div class="box">
+				  <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+				    <div class="img" style="background-image: url('https://nicoleswinburn.github.io//img/02_cnc_fresia/proceso_fisico//procesofisico13.jpg');" >
+				      <img itemprop="thumbnail" src="https://nicoleswinburn.github.io//img/02_cnc_fresia/proceso_fisico//procesofisico13.jpg" alt="Procesofisico13" />
+				    </div>
+			      <figcaption>
+		          <p>Procesofisico13</p>
+			      </figcaption>
+				    <a href="https://nicoleswinburn.github.io//img/02_cnc_fresia/proceso_fisico//procesofisico13.jpg" itemprop="contentUrl"></a>
+				  </figure>
+				</div>
+				<div class="box">
+				  <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+				    <div class="img" style="background-image: url('https://nicoleswinburn.github.io//img/02_cnc_fresia/proceso_fisico//procesofisico14.jpg');" >
+				      <img itemprop="thumbnail" src="https://nicoleswinburn.github.io//img/02_cnc_fresia/proceso_fisico//procesofisico14.jpg" alt="Procesofisico14" />
+				    </div>
+			      <figcaption>
+		          <p>Procesofisico14</p>
+			      </figcaption>
+				    <a href="https://nicoleswinburn.github.io//img/02_cnc_fresia/proceso_fisico//procesofisico14.jpg" itemprop="contentUrl"></a>
+				  </figure>
+				</div>
+				<div class="box">
+				  <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+				    <div class="img" style="background-image: url('https://nicoleswinburn.github.io//img/02_cnc_fresia/proceso_fisico//procesofisico15.jpg');" >
+				      <img itemprop="thumbnail" src="https://nicoleswinburn.github.io//img/02_cnc_fresia/proceso_fisico//procesofisico15.jpg" alt="Procesofisico15" />
+				    </div>
+			      <figcaption>
+		          <p>Procesofisico15</p>
+			      </figcaption>
+				    <a href="https://nicoleswinburn.github.io//img/02_cnc_fresia/proceso_fisico//procesofisico15.jpg" itemprop="contentUrl"></a>
+				  </figure>
+				</div>
+				<div class="box">
+				  <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+				    <div class="img" style="background-image: url('https://nicoleswinburn.github.io//img/02_cnc_fresia/proceso_fisico//procesofisico16.jpg');" >
+				      <img itemprop="thumbnail" src="https://nicoleswinburn.github.io//img/02_cnc_fresia/proceso_fisico//procesofisico16.jpg" alt="Procesofisico16" />
+				    </div>
+			      <figcaption>
+		          <p>Procesofisico16</p>
+			      </figcaption>
+				    <a href="https://nicoleswinburn.github.io//img/02_cnc_fresia/proceso_fisico//procesofisico16.jpg" itemprop="contentUrl"></a>
+				  </figure>
+				</div>
+				<div class="box">
+				  <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+				    <div class="img" style="background-image: url('https://nicoleswinburn.github.io//img/02_cnc_fresia/proceso_fisico//procesofisico17.jpg');" >
+				      <img itemprop="thumbnail" src="https://nicoleswinburn.github.io//img/02_cnc_fresia/proceso_fisico//procesofisico17.jpg" alt="Procesofisico17" />
+				    </div>
+			      <figcaption>
+		          <p>Procesofisico17</p>
+			      </figcaption>
+				    <a href="https://nicoleswinburn.github.io//img/02_cnc_fresia/proceso_fisico//procesofisico17.jpg" itemprop="contentUrl"></a>
+				  </figure>
+				</div>
+				<div class="box">
+				  <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+				    <div class="img" style="background-image: url('https://nicoleswinburn.github.io//img/02_cnc_fresia/proceso_fisico//procesofisico18.jpg');" >
+				      <img itemprop="thumbnail" src="https://nicoleswinburn.github.io//img/02_cnc_fresia/proceso_fisico//procesofisico18.jpg" alt="Procesofisico18" />
+				    </div>
+			      <figcaption>
+		          <p>Procesofisico18</p>
+			      </figcaption>
+				    <a href="https://nicoleswinburn.github.io//img/02_cnc_fresia/proceso_fisico//procesofisico18.jpg" itemprop="contentUrl"></a>
+				  </figure>
+				</div>
+				<div class="box">
+				  <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+				    <div class="img" style="background-image: url('https://nicoleswinburn.github.io//img/02_cnc_fresia/proceso_fisico//procesofisico19.jpg');" >
+				      <img itemprop="thumbnail" src="https://nicoleswinburn.github.io//img/02_cnc_fresia/proceso_fisico//procesofisico19.jpg" alt="Procesofisico19" />
+				    </div>
+			      <figcaption>
+		          <p>Procesofisico19</p>
+			      </figcaption>
+				    <a href="https://nicoleswinburn.github.io//img/02_cnc_fresia/proceso_fisico//procesofisico19.jpg" itemprop="contentUrl"></a>
+				  </figure>
+				</div>
+				<div class="box">
+				  <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+				    <div class="img" style="background-image: url('https://nicoleswinburn.github.io//img/02_cnc_fresia/proceso_fisico//procesofisico2.jpg');" >
+				      <img itemprop="thumbnail" src="https://nicoleswinburn.github.io//img/02_cnc_fresia/proceso_fisico//procesofisico2.jpg" alt="Procesofisico2" />
+				    </div>
+			      <figcaption>
+		          <p>Procesofisico2</p>
+			      </figcaption>
+				    <a href="https://nicoleswinburn.github.io//img/02_cnc_fresia/proceso_fisico//procesofisico2.jpg" itemprop="contentUrl"></a>
+				  </figure>
+				</div>
+				<div class="box">
+				  <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+				    <div class="img" style="background-image: url('https://nicoleswinburn.github.io//img/02_cnc_fresia/proceso_fisico//procesofisico20.jpg');" >
+				      <img itemprop="thumbnail" src="https://nicoleswinburn.github.io//img/02_cnc_fresia/proceso_fisico//procesofisico20.jpg" alt="Procesofisico20" />
+				    </div>
+			      <figcaption>
+		          <p>Procesofisico20</p>
+			      </figcaption>
+				    <a href="https://nicoleswinburn.github.io//img/02_cnc_fresia/proceso_fisico//procesofisico20.jpg" itemprop="contentUrl"></a>
+				  </figure>
+				</div>
+				<div class="box">
+				  <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+				    <div class="img" style="background-image: url('https://nicoleswinburn.github.io//img/02_cnc_fresia/proceso_fisico//procesofisico21.jpg');" >
+				      <img itemprop="thumbnail" src="https://nicoleswinburn.github.io//img/02_cnc_fresia/proceso_fisico//procesofisico21.jpg" alt="Procesofisico21" />
+				    </div>
+			      <figcaption>
+		          <p>Procesofisico21</p>
+			      </figcaption>
+				    <a href="https://nicoleswinburn.github.io//img/02_cnc_fresia/proceso_fisico//procesofisico21.jpg" itemprop="contentUrl"></a>
+				  </figure>
+				</div>
+				<div class="box">
+				  <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+				    <div class="img" style="background-image: url('https://nicoleswinburn.github.io//img/02_cnc_fresia/proceso_fisico//procesofisico22.jpg');" >
+				      <img itemprop="thumbnail" src="https://nicoleswinburn.github.io//img/02_cnc_fresia/proceso_fisico//procesofisico22.jpg" alt="Procesofisico22" />
+				    </div>
+			      <figcaption>
+		          <p>Procesofisico22</p>
+			      </figcaption>
+				    <a href="https://nicoleswinburn.github.io//img/02_cnc_fresia/proceso_fisico//procesofisico22.jpg" itemprop="contentUrl"></a>
+				  </figure>
+				</div>
+				<div class="box">
+				  <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+				    <div class="img" style="background-image: url('https://nicoleswinburn.github.io//img/02_cnc_fresia/proceso_fisico//procesofisico23.jpg');" >
+				      <img itemprop="thumbnail" src="https://nicoleswinburn.github.io//img/02_cnc_fresia/proceso_fisico//procesofisico23.jpg" alt="Procesofisico23" />
+				    </div>
+			      <figcaption>
+		          <p>Procesofisico23</p>
+			      </figcaption>
+				    <a href="https://nicoleswinburn.github.io//img/02_cnc_fresia/proceso_fisico//procesofisico23.jpg" itemprop="contentUrl"></a>
+				  </figure>
+				</div>
+				<div class="box">
+				  <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+				    <div class="img" style="background-image: url('https://nicoleswinburn.github.io//img/02_cnc_fresia/proceso_fisico//procesofisico24.jpg');" >
+				      <img itemprop="thumbnail" src="https://nicoleswinburn.github.io//img/02_cnc_fresia/proceso_fisico//procesofisico24.jpg" alt="Procesofisico24" />
+				    </div>
+			      <figcaption>
+		          <p>Procesofisico24</p>
+			      </figcaption>
+				    <a href="https://nicoleswinburn.github.io//img/02_cnc_fresia/proceso_fisico//procesofisico24.jpg" itemprop="contentUrl"></a>
+				  </figure>
+				</div>
+				<div class="box">
+				  <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+				    <div class="img" style="background-image: url('https://nicoleswinburn.github.io//img/02_cnc_fresia/proceso_fisico//procesofisico25.jpg');" >
+				      <img itemprop="thumbnail" src="https://nicoleswinburn.github.io//img/02_cnc_fresia/proceso_fisico//procesofisico25.jpg" alt="Procesofisico25" />
+				    </div>
+			      <figcaption>
+		          <p>Procesofisico25</p>
+			      </figcaption>
+				    <a href="https://nicoleswinburn.github.io//img/02_cnc_fresia/proceso_fisico//procesofisico25.jpg" itemprop="contentUrl"></a>
+				  </figure>
+				</div>
+				<div class="box">
+				  <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+				    <div class="img" style="background-image: url('https://nicoleswinburn.github.io//img/02_cnc_fresia/proceso_fisico//procesofisico26.jpg');" >
+				      <img itemprop="thumbnail" src="https://nicoleswinburn.github.io//img/02_cnc_fresia/proceso_fisico//procesofisico26.jpg" alt="Procesofisico26" />
+				    </div>
+			      <figcaption>
+		          <p>Procesofisico26</p>
+			      </figcaption>
+				    <a href="https://nicoleswinburn.github.io//img/02_cnc_fresia/proceso_fisico//procesofisico26.jpg" itemprop="contentUrl"></a>
+				  </figure>
+				</div>
+				<div class="box">
+				  <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+				    <div class="img" style="background-image: url('https://nicoleswinburn.github.io//img/02_cnc_fresia/proceso_fisico//procesofisico27.jpg');" >
+				      <img itemprop="thumbnail" src="https://nicoleswinburn.github.io//img/02_cnc_fresia/proceso_fisico//procesofisico27.jpg" alt="Procesofisico27" />
+				    </div>
+			      <figcaption>
+		          <p>Procesofisico27</p>
+			      </figcaption>
+				    <a href="https://nicoleswinburn.github.io//img/02_cnc_fresia/proceso_fisico//procesofisico27.jpg" itemprop="contentUrl"></a>
+				  </figure>
+				</div>
+				<div class="box">
+				  <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+				    <div class="img" style="background-image: url('https://nicoleswinburn.github.io//img/02_cnc_fresia/proceso_fisico//procesofisico28.jpg');" >
+				      <img itemprop="thumbnail" src="https://nicoleswinburn.github.io//img/02_cnc_fresia/proceso_fisico//procesofisico28.jpg" alt="Procesofisico28" />
+				    </div>
+			      <figcaption>
+		          <p>Procesofisico28</p>
+			      </figcaption>
+				    <a href="https://nicoleswinburn.github.io//img/02_cnc_fresia/proceso_fisico//procesofisico28.jpg" itemprop="contentUrl"></a>
+				  </figure>
+				</div>
+				<div class="box">
+				  <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+				    <div class="img" style="background-image: url('https://nicoleswinburn.github.io//img/02_cnc_fresia/proceso_fisico//procesofisico29.jpg');" >
+				      <img itemprop="thumbnail" src="https://nicoleswinburn.github.io//img/02_cnc_fresia/proceso_fisico//procesofisico29.jpg" alt="Procesofisico29" />
+				    </div>
+			      <figcaption>
+		          <p>Procesofisico29</p>
+			      </figcaption>
+				    <a href="https://nicoleswinburn.github.io//img/02_cnc_fresia/proceso_fisico//procesofisico29.jpg" itemprop="contentUrl"></a>
+				  </figure>
+				</div>
+				<div class="box">
+				  <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+				    <div class="img" style="background-image: url('https://nicoleswinburn.github.io//img/02_cnc_fresia/proceso_fisico//procesofisico3.jpg');" >
+				      <img itemprop="thumbnail" src="https://nicoleswinburn.github.io//img/02_cnc_fresia/proceso_fisico//procesofisico3.jpg" alt="Procesofisico3" />
+				    </div>
+			      <figcaption>
+		          <p>Procesofisico3</p>
+			      </figcaption>
+				    <a href="https://nicoleswinburn.github.io//img/02_cnc_fresia/proceso_fisico//procesofisico3.jpg" itemprop="contentUrl"></a>
+				  </figure>
+				</div>
+				<div class="box">
+				  <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+				    <div class="img" style="background-image: url('https://nicoleswinburn.github.io//img/02_cnc_fresia/proceso_fisico//procesofisico30.jpg');" >
+				      <img itemprop="thumbnail" src="https://nicoleswinburn.github.io//img/02_cnc_fresia/proceso_fisico//procesofisico30.jpg" alt="Procesofisico30" />
+				    </div>
+			      <figcaption>
+		          <p>Procesofisico30</p>
+			      </figcaption>
+				    <a href="https://nicoleswinburn.github.io//img/02_cnc_fresia/proceso_fisico//procesofisico30.jpg" itemprop="contentUrl"></a>
+				  </figure>
+				</div>
+				<div class="box">
+				  <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+				    <div class="img" style="background-image: url('https://nicoleswinburn.github.io//img/02_cnc_fresia/proceso_fisico//procesofisico31.jpg');" >
+				      <img itemprop="thumbnail" src="https://nicoleswinburn.github.io//img/02_cnc_fresia/proceso_fisico//procesofisico31.jpg" alt="Procesofisico31" />
+				    </div>
+			      <figcaption>
+		          <p>Procesofisico31</p>
+			      </figcaption>
+				    <a href="https://nicoleswinburn.github.io//img/02_cnc_fresia/proceso_fisico//procesofisico31.jpg" itemprop="contentUrl"></a>
+				  </figure>
+				</div>
+				<div class="box">
+				  <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+				    <div class="img" style="background-image: url('https://nicoleswinburn.github.io//img/02_cnc_fresia/proceso_fisico//procesofisico32.jpg');" >
+				      <img itemprop="thumbnail" src="https://nicoleswinburn.github.io//img/02_cnc_fresia/proceso_fisico//procesofisico32.jpg" alt="Procesofisico32" />
+				    </div>
+			      <figcaption>
+		          <p>Procesofisico32</p>
+			      </figcaption>
+				    <a href="https://nicoleswinburn.github.io//img/02_cnc_fresia/proceso_fisico//procesofisico32.jpg" itemprop="contentUrl"></a>
+				  </figure>
+				</div>
+				<div class="box">
+				  <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+				    <div class="img" style="background-image: url('https://nicoleswinburn.github.io//img/02_cnc_fresia/proceso_fisico//procesofisico4.jpg');" >
+				      <img itemprop="thumbnail" src="https://nicoleswinburn.github.io//img/02_cnc_fresia/proceso_fisico//procesofisico4.jpg" alt="Procesofisico4" />
+				    </div>
+			      <figcaption>
+		          <p>Procesofisico4</p>
+			      </figcaption>
+				    <a href="https://nicoleswinburn.github.io//img/02_cnc_fresia/proceso_fisico//procesofisico4.jpg" itemprop="contentUrl"></a>
+				  </figure>
+				</div>
+				<div class="box">
+				  <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+				    <div class="img" style="background-image: url('https://nicoleswinburn.github.io//img/02_cnc_fresia/proceso_fisico//procesofisico5.jpg');" >
+				      <img itemprop="thumbnail" src="https://nicoleswinburn.github.io//img/02_cnc_fresia/proceso_fisico//procesofisico5.jpg" alt="Procesofisico5" />
+				    </div>
+			      <figcaption>
+		          <p>Procesofisico5</p>
+			      </figcaption>
+				    <a href="https://nicoleswinburn.github.io//img/02_cnc_fresia/proceso_fisico//procesofisico5.jpg" itemprop="contentUrl"></a>
+				  </figure>
+				</div>
+				<div class="box">
+				  <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+				    <div class="img" style="background-image: url('https://nicoleswinburn.github.io//img/02_cnc_fresia/proceso_fisico//procesofisico6.jpg');" >
+				      <img itemprop="thumbnail" src="https://nicoleswinburn.github.io//img/02_cnc_fresia/proceso_fisico//procesofisico6.jpg" alt="Procesofisico6" />
+				    </div>
+			      <figcaption>
+		          <p>Procesofisico6</p>
+			      </figcaption>
+				    <a href="https://nicoleswinburn.github.io//img/02_cnc_fresia/proceso_fisico//procesofisico6.jpg" itemprop="contentUrl"></a>
+				  </figure>
+				</div>
+				<div class="box">
+				  <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+				    <div class="img" style="background-image: url('https://nicoleswinburn.github.io//img/02_cnc_fresia/proceso_fisico//procesofisico7.jpg');" >
+				      <img itemprop="thumbnail" src="https://nicoleswinburn.github.io//img/02_cnc_fresia/proceso_fisico//procesofisico7.jpg" alt="Procesofisico7" />
+				    </div>
+			      <figcaption>
+		          <p>Procesofisico7</p>
+			      </figcaption>
+				    <a href="https://nicoleswinburn.github.io//img/02_cnc_fresia/proceso_fisico//procesofisico7.jpg" itemprop="contentUrl"></a>
+				  </figure>
+				</div>
+				<div class="box">
+				  <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+				    <div class="img" style="background-image: url('https://nicoleswinburn.github.io//img/02_cnc_fresia/proceso_fisico//procesofisico8.jpg');" >
+				      <img itemprop="thumbnail" src="https://nicoleswinburn.github.io//img/02_cnc_fresia/proceso_fisico//procesofisico8.jpg" alt="Procesofisico8" />
+				    </div>
+			      <figcaption>
+		          <p>Procesofisico8</p>
+			      </figcaption>
+				    <a href="https://nicoleswinburn.github.io//img/02_cnc_fresia/proceso_fisico//procesofisico8.jpg" itemprop="contentUrl"></a>
+				  </figure>
+				</div>
+				<div class="box">
+				  <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+				    <div class="img" style="background-image: url('https://nicoleswinburn.github.io//img/02_cnc_fresia/proceso_fisico//procesofisico9.jpg');" >
+				      <img itemprop="thumbnail" src="https://nicoleswinburn.github.io//img/02_cnc_fresia/proceso_fisico//procesofisico9.jpg" alt="Procesofisico9" />
+				    </div>
+			      <figcaption>
+		          <p>Procesofisico9</p>
+			      </figcaption>
+				    <a href="https://nicoleswinburn.github.io//img/02_cnc_fresia/proceso_fisico//procesofisico9.jpg" itemprop="contentUrl"></a>
+				  </figure>
+				</div>
+</div>
+ 
+
+
+
+  
+
+
+<script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+<script src="/js/load-photoswipe.js"></script>
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.1/photoswipe.min.css" integrity="sha256-sCl5PUOGMLfFYctzDW3MtRib0ctyUvI9Qsmq2wXOeBY=" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.1/default-skin/default-skin.min.css" integrity="sha256-BFeI1V+Vh1Rk37wswuOYn5lsTcaU96hGaI7OUVCLjPc=" crossorigin="anonymous" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.1/photoswipe.min.js" integrity="sha256-UplRCs9v4KXVJvVY+p+RSo5Q4ilAUXh7kpjyIP5odyc=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.1/photoswipe-ui-default.min.js" integrity="sha256-PWHOlUzc96pMc8ThwRIXPn8yH4NOLu42RQ0b9SpnpFk=" crossorigin="anonymous"></script>
+
+
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+<div class="pswp__bg"></div>
+
+<div class="pswp__scroll-wrap">
+    
+    <div class="pswp__container">
+      <div class="pswp__item"></div>
+      <div class="pswp__item"></div>
+      <div class="pswp__item"></div>
+    </div>
+    
+    <div class="pswp__ui pswp__ui--hidden">
+    <div class="pswp__top-bar">
+      
+      <div class="pswp__counter"></div>
+      <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+      <button class="pswp__button pswp__button--share" title="Share"></button>
+      <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+      <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+      
+      
+      <div class="pswp__preloader">
+        <div class="pswp__preloader__icn">
+          <div class="pswp__preloader__cut">
+            <div class="pswp__preloader__donut"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+      <div class="pswp__share-tooltip"></div>
+    </div>
+    <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+    </button>
+    <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+    </button>
+    <div class="pswp__caption">
+      <div class="pswp__caption__center"></div>
+    </div>
+    </div>
+    </div>
+</div>
+</p>
+<p><a href="#top">▲ Volver Arriba</a></p>
 
 </div>
 </div>
