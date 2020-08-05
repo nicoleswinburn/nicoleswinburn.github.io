@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>03 Mecanizado CNC 2.5D - Respaldo - Nicole Swinburn</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <link rel="icon" href="https://nicoleswinburn.github.io/favicon.png">
+
+  
+  
+  <link rel="stylesheet" href="/css/style.min.df52c7c8fb17040fdfb216293b7a711034ee517647a54f8a626ea24f0382f02b.css">
+  
+
+  
+
+</head>
+
+<body class='page page-default-single'>
+  <div id="main-menu-mobile" class="main-menu-mobile">
+  <ul>
+    
+    
+    <li class="menu-item-inicio">
+      <a href="/">
+        <span>Inicio</span>
+      </a>
+    </li>
+    
+    <li class="menu-item-documentación">
+      <a href="/docs/">
+        <span>Documentación</span>
+      </a>
+    </li>
+    
+  </ul>
+</div>
+  <div class="wrapper">
+    <div class='header'>
+  <div class="container">
+    <div class="logo">
+      <a href="https://nicoleswinburn.github.io/"><img alt="Logo" src="/images/logo.png" /></a>
+    </div>
+    <div class="logo-mobile">
+      <a href="https://nicoleswinburn.github.io/"><img alt="Logo" src="/images/logo.png" /></a>
+    </div>
+    <div id="main-menu" class="main-menu">
+  <ul>
+    
+    
+    <li class="menu-item-inicio">
+      <a href="/">
+        <span>Inicio</span>
+      </a>
+    </li>
+    
+    <li class="menu-item-documentación">
+      <a href="/docs/">
+        <span>Documentación</span>
+      </a>
+    </li>
+    
+  </ul>
+</div>
+    <button id="toggle-main-menu-mobile" class="hamburger hamburger--slider" type="button">
+  <span class="hamburger-box">
+    <span class="hamburger-inner"></span>
+  </span>
+</button>
+  </div>
+</div>
+
+
+    
+    
+    
+    
+    
+    
+
+    
+    <div class="container pt-2 pt-md-6 pb-3 pb-md-6">
+      <div class="row">
+        <div class="col-12 col-md-3 mb-3">
+          <div class="sidebar">
+            
+<div class="docs-menu">
+  <h4>Documentación</h4>
+  <ul>
+    
+    <li class="">
+      <a href="https://nicoleswinburn.github.io/docs/01-planimetr%C3%ADas-silla-plywood/">01 Planimetrías Silla Plywood</a>
+    </li>
+    
+    <li class="">
+      <a href="https://nicoleswinburn.github.io/docs/02-mecanizado-cnc-silla-fresia/">02 Mecanizado CNC Silla Fresia</a>
+    </li>
+    
+    <li class="active ">
+      <a href="https://nicoleswinburn.github.io/docs/03-mecanizado-cnc-2.5d-respaldo/">03 Mecanizado CNC 2.5D - Respaldo</a>
+    </li>
+    
+    <li class="">
+      <a href="https://nicoleswinburn.github.io/docs/ejemplo/">Ejemplo Shortcodes</a>
+    </li>
+    
+    <li class="">
+      <a href="https://nicoleswinburn.github.io/docs/instalar-tema/">Instalar Tema</a>
+    </li>
+    
+    <li class="">
+      <a href="https://nicoleswinburn.github.io/docs/markdown/">Ejemplos Markdown</a>
+    </li>
+    
+  </ul>
+</div>
+
+          </div>
+        </div>
+        <div class="col-12 col-md-9">
+          
+<h1 class="title">03 Mecanizado CNC 2.5D - Respaldo</h1>
+<div class="content ">
+  <p>El mecanizado CNC 2.5D, es decir, en 2 ejes y medio, se define así ya que solo permite un único valor máximo de profundidad (eje z) en cada punto en el plano x, y. En otras palabras, consiste en la utilización de los tres ejes (X, Y y Z), pero no simultáneamente. Primero el eje Z se ubica a cierta profundidad y luego se realiza el corte en los otros dos ejes (X e Y). Luego el eje Z se retrae y el X con el Y se devuelven al punto de inicio. Y así se va repitiendo hasta completar la operación.</p>
+<p>En este tipo de trabajo, las superficies finales obtenidas son todas normales o paralelas al eje de la herramienta, no se permite una superficie desformada. Por ejemplo, una interpolación de hélice (movimiento del cutter siguiendo la forma de una hélice) en un contorno, está moviendo continuamente la herramienta a lo largo de los 3 ejes, pero la superficie resultante sigue siendo una pared vertical con un fondo plano: todavía estamos en un mundo 2.5D.</p>
+<p>Este tipo de mecanizado puede utilizarse para la generación de ranuras, perfilados, cajeras, entre otros. Además, se pueden realizar grabados de texto y elementos artísticos sobre áreas planas.</p>
+<p><img src="/img/02_cnc_fresia/proceso_fisico/procesofisico3.jpg" alt="MecanizadoCNC_respaldo"></p>
+<hr>
+<h2 id="por-qué-25d-y-no-3d">¿Por qué 2.5D y no 3D?</h2>
+<p>A diferencia del 2.5D, el mecanizado en tres dimensiones tiene la capacidad de movilizar los tres ejes de manera simultánea, creando curvas en un corte helicoidal, por lo que este tipo de fresado se utiliza cuando se busca obtener un resultado de una complejidad mayor.</p>
+<p>Pero principalmente 2.5D vs 3D es realmente algo más sobre las diferencias entre los software CAM, ya que prácticamente todas las máquinas pueden hacer el trabajo en 3 ejes.</p>
+<p><a href="#top">▲ Volver Arriba</a></p>
+<hr>
+<h2 id="proceso-de-mecanizado">Proceso de mecanizado</h2>
+<p>Para comenzar, desde el modo &ldquo;Design&rdquo;, hay que alinear con el origen del plano el cuerpo que se va a mecanizar, siendo en este caso el respaldo. Es importante que esta alineación sea lo más exacta posible para que el fresado quede derecho.</p>
+<p>Luego, al igual que en el caso de las piezas de la silla, se crea un sketch en en el plano XY y luego se le hace un extrude que cubra la pieza por completo.</p>
+<p><img src="/img/03_cnc_respaldo/1.png" alt="Proceso1"></p>
+<p>Para continuar, se debe cambiar al modo “Manufacture” y se crea el Setup. La máquina a utilizar será la misma que se usó en el ejercicio anterior de mecanización de la Silla Fresia: la genérica de 3 ejes.</p>
+<p>En la pestaña &ldquo;Stock&rdquo; del setup hay que elegir el modo <em>From Solid</em> y hacer click sobre el bloque de madera.  Luego, desde la pestaña setup, se le entregará la información al programa sobre las coordenadas de trabajo (Eje Z - Cara superior | Eje X - Arista que coincide con el eje X), el box point y el modelo con el que se trabajará que será el respaldo.</p>
+<p><img src="/img/03_cnc_respaldo/2.png" alt="Proceso2"></p>
+<p>Dando un pequeño paso atrás, desde el modo &ldquo;Design&rdquo;, se crea un nuevo sketch seleccionando la cara superior del stock.  Luego en &ldquo;create&rdquo; hay que eegir la opción &ldquo;Project&rdquo; para crear una proyección del cuerpo sobre la cara superior del material de corte.</p>
+<p><img src="/img/03_cnc_respaldo/3.png" alt="Proceso3"></p>
+<p>Lo primero que hay que hacer cuando aparece la ventana, es especificar que la geometría a seleccionar es un <em>body</em>, el cuál será el respaldo.  Esto generará la proyección del área que se quiere mecanizar.</p>
+<p>Luego, de vuelta en el modo “Manufacture” comienza el mecanizado. Dentro de las opciones 3D se utilizará <strong>Adaptive Clearing</strong>, cuya traducción es <em>Limpieza o Desbaste Adaptativo</em>, esto quiere decir que se removerá material para optimizar o acelerar un poco el procedimiento de obtención de la superficie.</p>
+<p><img src="/img/03_cnc_respaldo/4.png" alt="Proceso4"></p>
+<p>Para esto se selecciona la fresia <em><strong>Flat Endmill de 6 mm de diámetro</strong></em>, la misma que ya hemos estado usando anteriormente. Es importante destacar que en <em>Adaptative</em> se utiliza esta que es de punta plana.</p>
+<p><img src="/img/03_cnc_respaldo/5.png" alt="Proceso5"></p>
+<p>Habiendo seleccionado la fresia, se definirán los límites dentro de los cuales la máquina va a trabajar. Esto se hace en la pestaña &ldquo;geometry&rdquo;, colocando la opción <em>Machining Boundary</em> en <em>Selection</em> y seleccionando la proyección que se hizo previamente. Más abajo, en la misma pestaña, hay que volver a seleccionar el &ldquo;model&rdquo; haciendo click en el respaldo. Por último, en la pestaña &ldquo;passes&rdquo;, hay que cambiar el <em>Optimal Load</em>, ya que este hace referencia al material que va a cortar y si es 6 mm es demasiado grande, por lo que hay que dejarlo a 3mm.</p>
+<p><img src="/img/03_cnc_respaldo/6.png" alt="Proceso6"></p>
+<p>Luego al darle OK hay que esperar a que genere las trayectorias, lo cual toma un poco de tiempo porque son muchas.</p>
+<p><img src="/img/03_cnc_respaldo/7.png" alt="Proceso7"></p>
+<p>Una vez que llegó al 100% se puede ver la simulación. Se puede colocar la opción transparent o no, en este caso lo dejé opaco. Se puede ver que para entrar, la fresia hace un pequeño espiral y luego sigue su trayectoria.</p>
+<div>
+    <video 
+    width="100%" 
+    height="450" 
+    autoplay muted loop controls preload>
+    <source src="/img/video1respaldo.mp4"  type="video/mp4">
+    </video>
+</div>
+<p>Como se puede notar, casi al final de la simulación se visualiza un error en color rojo, el cuál se debe a que el cabezal de la fresia choca con el borde del bloque. Quise colocarlo en el proceso, porque considero importante ver el error para entender cómo solucionarlo.</p>
+<p>Para arreglarlo hay que alargar la fresia. Para estp. desde la librería de herramientas se selecciona la fresia en uso, botón derecho y copiar para que se repita en la lista y luego click en <em>editar tool</em>.</p>
+<p>En la pestaña &ldquo;General&rdquo; se le coloca un nuevo nombre, por ejemplo especificar <strong>EDITADA LARGA</strong>. En la pestaña &ldquo;Cutter&rdquo;, cambiar el <em>Lenght Below Holder</em> al doble, en este caso 40 mm.</p>
+<p><img src="/img/03_cnc_respaldo/9.png" alt="Proceso9"></p>
+<p>Al realizar este cambio después de haber hecho el proceso de Adaptative, aparecerá un signo de exclamación indicando que hay que actualizar. Se coloca editar y se selecciona la nueva fresia <strong>editada larga</strong>. Volverá a lanzar el error de Optimal Load que hay que dejar en 3 mm. Ahora hay que esperar a que termine de generar las trayectorias nuevamente.</p>
+<p>Ahora sin errores, se puede ver la simulación correcta con una fresia más larga, realizando el proceso de Adaptative.</p>
+<div>
+    <video 
+    width="100%" 
+    height="450" 
+    autoplay muted loop controls preload>
+    <source src="/img/adaptative-respaldo.mp4"  type="video/mp4">
+    </video>
+</div>
+<p>El siguiente paso a realizar es la acción Parallel. Para este caso, hay que seleccionar la fresia de punta redonda para facilitar el trabajo y crear trayectorias más limpias.</p>
+<p>En la pestaña de Geometry se delimita el área de corte en <em>Machining Boundary</em> que corresponde a la proyección, y en “model” seleccionar el respaldo (al igual que antes). <em><strong>Importante</strong></em>: eliminar el check de la caja que dice “Include Setup Model”, o sino las trayectorias no se adecuarán a la forma del respaldo. También fijarse en la pestaña “passes&rdquo; que el stepover sea 2 o 3 mm, ya que es la distancia que separa las líneas paralelas de trayectoria. Mientras más pequeño, más precisión.</p>
+<p><img src="/img/03_cnc_respaldo/10.png" alt="Proceso10"></p>
+<p>Fresia 3/4 Ball Endmill:</p>
+<p><img src="/img/03_cnc_respaldo/11.png" alt="Proceso11"></p>
+<p>Simulación primer Parallel:</p>
+<div>
+    <video 
+    width="100%" 
+    height="450" 
+    autoplay muted loop controls preload>
+    <source src="/img/parallel1-respaldo.mp4"  type="video/mp4">
+    </video>
+</div>
+<p>En esta simulación ya se puede ver que va tomando forma con los dos pasos anteriormente mencionados: Adaptative y Parallel.</p>
+<div>
+    <video 
+    width="100%" 
+    height="450" 
+    autoplay muted loop controls preload>
+    <source src="/img/video2respaldo.mp4"  type="video/mp4">
+    </video>
+</div>
+<p>Ahora, si se hicieron las terminaciones paralelas hacia un lado, es necesario hacerlas también hacia el otro lado.  Por lo que el primer paso es hacer click derecho en “Parallel 1” del menú de la izquierda y duplicar. Luego hay que editar este último Parallel y en la pestaña de “passes” se cambia la dirección de mecanizado a 90° y el stepover a 2 mm, ahora tendrá aún más definición.</p>
+<p><img src="/img/03_cnc_respaldo/13.png" alt="Proceso13"></p>
+<p>Simulación segundo Parallel:</p>
+<div>
+    <video 
+    width="100%" 
+    height="450" 
+    autoplay muted loop controls preload>
+    <source src="/img/parallel2-respaldo.mp4"  type="video/mp4">
+    </video>
+</div>
+<p>Con esto finaliza el mecanizado 2.5D del respaldo por un solo lado. En el siguiente video se puede apreciar la simulación de los tres pasos completos en cámara rápida.</p>
+<div>
+    <video 
+    width="100%" 
+    height="450" 
+    autoplay muted loop controls preload>
+    <source src="/img/final-respaldo.mp4"  type="video/mp4">
+    </video>
+</div>
+<h4 id="cambio-de-orientación">Cambio de orientación</h4>
+<p>Para seguir trabajando, considerando que este tipo de trabajo originalmente se haría de manera física en el FabLab, hay que retirar el bloque de la máquina y cambiarle la orientación para trabajar en la otra cara, quedando así:</p>
+<p><img src="/img/03_cnc_respaldo/15.png" alt="Proceso15"></p>
+<p>Se repiten los mismos pasos que con la primera cara trabajada: Se especifican las coordenadas a trabajar, se crea un sketch para delimitar el área de trabajo y se repiten los mismos tres pasos: Adaptative, Parallel 1 y Parallel 2.</p>
+<h6 id="adaptative">Adaptative</h6>
+<div>
+    <video 
+    width="100%" 
+    height="450" 
+    autoplay muted loop controls preload>
+    <source src="/img/adaptative-respaldo2.mp4"  type="video/mp4">
+    </video>
+</div>
+<h6 id="primer-parallel">Primer parallel</h6>
+<div>
+    <video 
+    width="100%" 
+    height="450" 
+    autoplay muted loop controls preload>
+    <source src="/img/parallel1-respaldo2.mp4"  type="video/mp4">
+    </video>
+</div>
+<h6 id="segundo-parallel">Segundo parallel</h6>
+<div>
+    <video 
+    width="100%" 
+    height="450" 
+    autoplay muted loop controls preload>
+    <source src="/img/parallel2-respaldo2.mp4"  type="video/mp4">
+    </video>
+</div>
+<h6 id="simulación-final-de-la-otra-cara">Simulación final de la otra cara</h6>
+<div>
+    <video 
+    width="100%" 
+    height="450" 
+    autoplay muted loop controls preload>
+    <source src="/img/final-respaldo2.mp4"  type="video/mp4">
+    </video>
+</div>
+<h4 id="última-parte">Última parte</h4>
+<p>Para finalizar, de manera manual se realiza un corte y lijado para darle la forma a los costados del respaldo.</p>
+<h2 id="-volver-arribatop"><a href="#top">▲ Volver Arriba</a></h2>
+<h2 id="optimización-de-los-tiempos">Optimización de los tiempos</h2>
+<p>Una de las soluciones más famosas para optimizar el tiempo de mecanizado de una máquina, fue propuesta por la empresa SolidCAM, la cual diseñó desde cero el CAM iMachining, el software utilizado para todas las aplicaciones CNC.</p>
+<p>Este nuevo diseño permite ahorrar hasta un 70% del tiempo de mecanizado CNC y, además, disminuye el desgaste de la máquina y sus herramientas, aumentando la vida útil de estas entre 2 y 3 veces.</p>
+<p>Algo muy positivo a destacar, es que el interface del software te permite observar de manera detallada lo que se va a mecanizar y, además, permite identificar a tiempo cualquier movimiento extraño o colisión antes de llevarlo a la máquina de manera física.</p>
+<p>Esta experiencia simplificada posee una experiencia del usuario muy alta, generando trayectorias optimizadas, con un corte eficiente de la pieza y con altas tasas de arranque de material.</p>
+<p>Por otro lado, reduce de gran manera las tensiones mecánicas y térmicas sufridas por la pieza en el proceso, en comparación con el fresado convencional.</p>
+<p>A diferencia de otros programas CAM del mercado, en este el usuario es quién debe especificar las condiciones de corte, produndidad de pasada, velocidad, entre otros.</p>
+<p>También posee un asistente que calcula las condiciones de corte para ayudar al operario a mecanizar de forma más rápida. Antes el operario tenía que hacerlo por sí solo y muchas veces no se consideraban variables importantes ni se sincronizaban bien los datos, evitando así que los resultados fueran los óptimos.</p>
+<p>Estos y muchas otros beneficios tiene este software completamente actualizado, permitiendo a todos los mecanizadores que lo poseen ahorrarse una gran cantidad de su tiempo en este proceso.</p>
+<p><em>Fuente: <a href="https://www.interempresas.net/MetalMecanica/Articulos/100403-iMachining-el-CAM-que-reduce-hasta-el-70-por-ciento-el-tiempo-de-mecanizado.html">https://www.interempresas.net/MetalMecanica/Articulos/100403-iMachining-el-CAM-que-reduce-hasta-el-70-por-ciento-el-tiempo-de-mecanizado.html</a></em></p>
+<p><a href="#top">▲ Volver Arriba</a></p>
+<hr>
+<h2 id="modelo-3d">Modelo 3D</h2>
+<p>Aquí se presenta el modelo 3D del respaldo de la Silla Fresia.</p>
+<div>
+    <iframe 
+    src="https://alumnos2147.autodesk360.com/shares/public/SH56a43QTfd62c1cd968090904c6fff5fd2e?mode=embed" 
+    width="100%" 
+    height="450" 
+    allowfullscreen="true" 
+    webkitallowfullscreen="true" 
+    mozallowfullscreen="true"  
+    frameborder="0">
+    </iframe>    
+</div>
+
+
+<p><a href="#top">▲ Volver Arriba</a></p>
+<hr>
+<h2 id="proceso-físico-en-el-fablab">Proceso físico en el FabLab</h2>
+<p><img src="/img/02_cnc_fresia/proceso_fisico/procesofisico2.jpg" alt="MecanizadoCNC_respaldo2">
+<img src="/img/02_cnc_fresia/proceso_fisico/procesofisico3.jpg" alt="MecanizadoCNC_respaldo3">
+<img src="/img/02_cnc_fresia/proceso_fisico/procesofisico4.jpg" alt="MecanizadoCNC_respaldo4">
+<img src="/img/02_cnc_fresia/proceso_fisico/procesofisico5.jpg" alt="MecanizadoCNC_respaldo5">
+<img src="/img/02_cnc_fresia/proceso_fisico/procesofisico6.jpg" alt="MecanizadoCNC_respaldo6">
+<img src="/img/02_cnc_fresia/proceso_fisico/procesofisico15.jpg" alt="MecanizadoCNC_respaldo15">
+<img src="/img/02_cnc_fresia/proceso_fisico/procesofisico16.jpg" alt="MecanizadoCNC_respaldo16">
+<img src="/img/02_cnc_fresia/proceso_fisico/procesofisico22.jpg" alt="MecanizadoCNC_respaldo22">
+<img src="/img/02_cnc_fresia/proceso_fisico/procesofisico17.jpg" alt="MecanizadoCNC_respaldo17"></p>
+<p><a href="#top">▲ Volver Arriba</a></p>
+
+</div>
+</div>
+
+        </div>
+      </div>
+    </div>
+    
+  </div>
+
+  <div class="sub-footer">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <div class="sub-footer-inner">
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+  
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/scripts.min.1237ff71925bb8625c97a9af8db4c54525258bedfd7c47493daaff723bea755e.js"></script>
+  
+
+  
+  
+  
+    
+  
+
+
+</body>
+
+</html>
