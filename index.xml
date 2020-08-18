@@ -39,15 +39,6 @@
     </item>
     
     <item>
-      <title>Instalar Tema</title>
-      <link>https://nicoleswinburn.github.io/docs/instalar-tema/</link>
-      <pubDate>Wed, 17 Jun 2020 19:30:08 +1000</pubDate>
-      
-      <guid>https://nicoleswinburn.github.io/docs/instalar-tema/</guid>
-      <description>Tutorial de intalación del tema utilizando el Framework Hugo.</description>
-    </item>
-    
-    <item>
       <title>06 Eco-Macetero</title>
       <link>https://nicoleswinburn.github.io/docs/06-eco-macetero/</link>
       <pubDate>Wed, 17 Jun 2020 19:30:08 +1000</pubDate>
@@ -63,6 +54,15 @@
       
       <guid>https://nicoleswinburn.github.io/docs/markdown/</guid>
       <description>Ejemplos de uso de lenguaje Markdown para redactar las publicaciones.</description>
+    </item>
+    
+    <item>
+      <title>07 Molde 3D Macetero</title>
+      <link>https://nicoleswinburn.github.io/docs/07-molde-3d-macetero/</link>
+      <pubDate>Wed, 17 Jun 2020 19:30:08 +1000</pubDate>
+      
+      <guid>https://nicoleswinburn.github.io/docs/07-molde-3d-macetero/</guid>
+      <description>Modelado 3D del molde en positivo y negativo para poder obtener un macetero.</description>
     </item>
     
   </channel>
