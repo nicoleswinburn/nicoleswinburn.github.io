@@ -103,15 +103,15 @@
     </li>
     
     <li class="">
-      <a href="https://nicoleswinburn.github.io/docs/04-bonus-layer-chair/">04 Bonus Layer Chair</a>
+      <a href="https://nicoleswinburn.github.io/docs/04-bonus-layer-chair/">04 Bonus Mecanizado Layer Chair</a>
     </li>
     
     <li class="">
-      <a href="https://nicoleswinburn.github.io/docs/06-eco-macetero/">06 Eco-Macetero</a>
+      <a href="https://nicoleswinburn.github.io/docs/05-ultrabonus-eco-macetero/">05 Ultrabonus Eco-Macetero</a>
     </li>
     
     <li class="">
-      <a href="https://nicoleswinburn.github.io/docs/07-molde-3d-macetero/">07 Molde 3D Macetero</a>
+      <a href="https://nicoleswinburn.github.io/docs/06-molde-3d-macetero-grupal/">06 Molde 3D Macetero (Grupal)</a>
     </li>
     
   </ul>
@@ -144,7 +144,7 @@
 <h4 id="piezas-planas">Piezas planas</h4>
 <p>El proceso comienza creando un sketch de 1220 mm x 1220 mm, al cuál se le hará un extrude de 15mm, para simular la plancha donde colocaremos las piezas a mecanizar. Para colocar dichas piezas, las copiamos y las alineamos con el plano horizontal, ubicándolas manualmente en la plancha de manera ordenada sin que se toquen entre ellas.</p>
 <p><img src="/img/02_cnc_fresia/1.png" alt="MecanizadoCNC_1"></p>
-<p>Luego, cambiando el menú de &ldquo;Design&rdquo; a &ldquo;Manufacture&rdquo;, se crea un setup en el cual hay que definir los ejes z (cara superior) y x (borde más cercano a uno y de la cara superior) de la plancha. Además se elige un <strong>box point</strong>, el cual indica donde comienzan las coordenadas para que la máquina las lea. Este último vendría siendo el de la esquina inferior izquierda, pero de la cara superior de la plancha.</p>
+<p>Luego, cambiando el menú de &ldquo;Design&rdquo; a &ldquo;Manufacture&rdquo;, se crea un setup en el cual hay que definir los ejes z (cara superior) y x (borde más cercano a uno y de la cara superior) de la plancha. Además se elige un <strong>box point</strong>, el cual indica dónde comienzan las coordenadas para que la máquina las lea. Este último vendría siendo el de la esquina inferior izquierda, pero de la cara superior de la plancha.</p>
 <p><img src="/img/02_cnc_fresia/2.png" alt="MecanizadoCNC_1"></p>
 <h6 id="mecanizado-interior">Mecanizado Interior</h6>
 <p>¿Qué quiere decir mecanizado interior? Se refiere al corte que se realiza en las partes interiores de las piezas, creando orificios para facilitar el ensamblaje entre piezas. La forma de dichos agujeros se deben a que la máquina no puede hacer ángulos de 90° por dentro y por eso realiza un calado formando 4 orejas alrededor en los costados.</p>
@@ -169,7 +169,7 @@
 <p>¿Qué quiere decir mecanizado exterior? Se refiere al corte que se realiza en las partes exteriores de las piezas, es decir, el contorno o silueta de cada pieza.</p>
 <p>Con el paso anterior concluido, lo que sigue es hacer un nuevo <strong>contour 2d</strong> y se selecciona el área exterior de todas las piezas para cortarlas de la plancha, este vendría siendo el corte final. Nuevamente repetimos el paso de hacer click en la pestaña &ldquo;Passes&rdquo; para darle 3 mm de multiple depths.</p>
 <p><img src="/img/02_cnc_fresia/7.png" alt="MecanizadoCNC_1"></p>
-<p>Antes de finalizar el paso anterior, es importante considerar que cuando estemos cortando la pieza y esta esté terminando el mecanizado, al estar cada vez más suelta comenzará a vibrar y la fresia probablemente haga un corte que rompa la pieza. Es por esto que hay que agregarle tabs que afirmen la pieza a la plancha. Esto se hace en la pestaña &ldquo;geometría&rdquo;, check en comando &ldquo;tabs&rdquo;. Se aumenta un poco el &ldquo;tab height&rdquo; de 1.5 mm a 3 mm para que no sea tan pequeño, y la distancia entre tab y tab se agranda de 48 mm a 350 mm, porque no es necesario que hayan tantos y tan juntos.</p>
+<p>Antes de finalizar el paso anterior, es importante considerar que cuando estemos cortando la pieza y esta esté terminando el mecanizado, al estar cada vez más suelta comenzará a vibrar y la fresia probablemente haga un corte que rompa la pieza. Es por esto que hay que agregarle tabs que afirmen la pieza a la plancha. Esto se hace en la pestaña &ldquo;geometría&rdquo;, check en comando &ldquo;tabs&rdquo;. Se aumenta un poco el &ldquo;tab height&rdquo; de 1.5 mm a 3 mm para que no sea tan pequeños, y la distancia entre tab y tab se agranda de 48 mm a 350 mm, porque no es necesario que hayan tantos y tan juntos.</p>
 <p><img src="/img/02_cnc_fresia/8.png" alt="MecanizadoCNC_1"></p>
 <p>Considerar que en las piezas más pequeñas hay que poner una separación menor (100mm) ya que si el número es muy grande, los tabs tienden a desaparecer (no hay suficiente espacio para que hayan tabs).</p>
 <p><img src="/img/02_cnc_fresia/9.png" alt="MecanizadoCNC_1"></p>

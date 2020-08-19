@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
-  <title>04 Bonus Layer Chair - Nicole Swinburn</title>
+  <title>04 Bonus Mecanizado Layer Chair - Nicole Swinburn</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   
   <link rel="icon" href="https://nicoleswinburn.github.io/favicon.png">
@@ -103,15 +103,15 @@
     </li>
     
     <li class="active ">
-      <a href="https://nicoleswinburn.github.io/docs/04-bonus-layer-chair/">04 Bonus Layer Chair</a>
+      <a href="https://nicoleswinburn.github.io/docs/04-bonus-layer-chair/">04 Bonus Mecanizado Layer Chair</a>
     </li>
     
     <li class="">
-      <a href="https://nicoleswinburn.github.io/docs/06-eco-macetero/">06 Eco-Macetero</a>
+      <a href="https://nicoleswinburn.github.io/docs/05-ultrabonus-eco-macetero/">05 Ultrabonus Eco-Macetero</a>
     </li>
     
     <li class="">
-      <a href="https://nicoleswinburn.github.io/docs/07-molde-3d-macetero/">07 Molde 3D Macetero</a>
+      <a href="https://nicoleswinburn.github.io/docs/06-molde-3d-macetero-grupal/">06 Molde 3D Macetero (Grupal)</a>
     </li>
     
   </ul>
@@ -121,7 +121,7 @@
         </div>
         <div class="col-12 col-md-9">
           
-<h1 class="title">04 Bonus Layer Chair</h1>
+<h1 class="title">04 Bonus Mecanizado Layer Chair</h1>
 <div class="content ">
   <p>La <em>Layer Chair</em> está diseñada como un ejemplo de trabajo con grandes superficies orgánicas en el enrutador CNC. La definición paramétrica de Grasshopper le permite ingresar cualquier curva de perfil que desee, y el sistema genera nuevas curvas de fresado. Entonces, puedes crear la silla perfecta para ti. El sistema paramétrico le permite cambiar el grosor del material, el tamaño de la broca de fresado, el ancho deseado de la silla, etc. También es posible cambiar el lenguaje de forma de la silla ajustando el tamaño de los filetes interior y exterior.</p>
 <p>Tiene muchas variaciones, por lo que este post se basará en la llamada <em>Amsterdam edition</em> o <em>Cello edition</em>. La que aquí se presenta fue obtenida de la página <em>obrary.com</em>, diseñada por Jens Dyvik de <strong>Dyvik Design</strong>. Él es un diseñador especializado en colaboración global y manufactura local, y se enfoca en trabajar principalmente en las conexiones emocionales de las personas con los productos, logrando crear servicios y productos que ayudan a crear esta significativa conexión.</p>
@@ -256,6 +256,7 @@
 <p><a href="#top">▲ Volver Arriba</a></p>
 <hr>
 <h2 id="planimetrías">Planimetrías</h2>
+<p>Volviendo al modelo en el que se enfoca este post, he aquí las planimetrías, cotas, detalles y diferentes vistas de la silla.</p>
 <h4 id="cotas">Cotas</h4>
 <p><img src="/img/04_bonus1/planim-01.png" alt="planimetria1"></p>
 <h4 id="corte">Corte</h4>
@@ -266,7 +267,32 @@
 <p><img src="/img/04_bonus1/planim-03.png" alt="planimetria3"></p>
 <p><a href="#top">▲ Volver Arriba</a></p>
 <hr>
-<h2 id="proceso-de-mecanizado-videos--fotos">Proceso de mecanizado videos + fotos</h2>
+<h2 id="proceso-de-mecanizado">Proceso de mecanizado</h2>
+<p>Con el modelo 3D de la silla listo en el programa, se revisa la cantidad de piezas que posee la silla. Desde la investigación se pudo obtener la información de que la silla utiliza más de una plancha de stock de material para su mecanización.</p>
+<p><img src="/img/04_bonus1/1.png" alt="silla1"></p>
+<p>Para comenzar con el proceso, se crea un sketch de 1220 mm x 1220 mm al cual se le hará un extrude de 18 mm aproximadamente (en este caso se aproximó a lo que cubría suficientemente el grosor de cada pieza). Luego, se duplicó el stock para tener más material y se ubicaron las veintidós piezas alineadas con el plano horizontal, de manera ordenada e intentando optimizar lo más posible el material.</p>
+<p><img src="/img/04_bonus1/2.png" alt="silla2"></p>
+<p>Para continuar, cambiando el menú de &ldquo;Design&rdquo; a &ldquo;Manufacture&rdquo;, se crea un nuevo Setup en el cual hay que definir los ejes z (cara superior) y x (borde más cercano a uno y de la cara superior) de la plancha. Además, se elige un <strong>box point</strong>, el cual indica dónde comienzan las coordenadas para que la máquina las lea. Este vendría siendo el de la esquina inferior izquierda, de la plancha izquierda, pero de la cara superior de la plancha. Importante que en la pestaña <em>Stock</em> estén seleccionadas ambas planchas que creamos antes.</p>
+<p><img src="/img/04_bonus1/3.png" alt="silla3"></p>
+<p>Ahora corresponde comenzar con el proceso de mecanizado. Como esta silla solo tiene piezas planas y sueltas sin ningún detalle, se le debe realizar el <em><strong>Mecanizado Exterior</strong></em>, el cual, como se mencionó en el post <em>02 Mecanizado CNC Silla Fresia</em>, consiste en un corte que se realiza en las partes exteriores de la pieza, es decir, el contorno o silueta.
+Para realizarlo, se debe hacer un <strong>contour 2D</strong> y se selecciona el área exterior (de la cara inferior de la plancha) de todas las piezas que se quiere cortar. Además, debemos se debe recordar colocar 3 mm de multiple depths en la pestaña &ldquo;Passes&rdquo;.</p>
+<p><img src="/img/04_bonus1/4.png" alt="silla4"></p>
+<p>Antes de finalizar el setup, es importante considerar que cuando la máquina esté terminando de cortar las piezas, estas estarán sueltas y comenzarán a vibrar, generando algún tipo de accidente como que la pieza se rompa o la máquina se dañe. Para evitar esto, hay que agregarle tabs a las piezas para que se mantengan firmes. Esto e hace en la pestaña &ldquo;geometría&rdquo;, check en el comando &ldquo;tabs&rdquo; y se aumenta el <em>tab height</em> a 2.5 o 3 mm para que no sean tan pequeños. Además, la distancia entre cada tab se puede agrandar a 350 mm, porque no es necesario que hayan tantos y tan juntos.</p>
+<p><img src="/img/04_bonus1/5.png" alt="silla5"></p>
+<p>Al colocar aceptar, aparecerá la ventana de elección de la fresia a utilizar, la cual será <strong>flat end mill de 6mm de diámetro</strong>.</p>
+<p><img src="/img/04_bonus1/6.png" alt="silla6"></p>
+<p>Con la fresia ya seleccionada, hay que esperar a que el programa genere las trayectorias, lo cual toma un par de minutos al ser tantas piezas.</p>
+<p><img src="/img/04_bonus1/7.png" alt="silla7"></p>
+<p>Una vez listo, ya se puede ver la simulación del mecanizado.</p>
+<div>
+    <video 
+    width="100%" 
+    height="450" 
+    autoplay muted loop controls preload>
+    <source src="/img/mecan_layerchair.mp4"  type="video/mp4">
+    </video>
+</div>
+<p>Como se puede notar en el video, la simulación la toma como si fuera una sola plancha gigante de stock de material, pero para el trabajo en el FabLab, se debería trabajar en un stock primero y luego en el otro.</p>
 <p><a href="#top">▲ Volver Arriba</a></p>
 <hr>
 <h2 id="modelo-3d">Modelo 3D</h2>
