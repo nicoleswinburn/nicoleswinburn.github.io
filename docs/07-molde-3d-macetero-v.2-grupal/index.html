@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>07 Molde 3D Macetero v.2 (Grupal) - Nicole Swinburn</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <link rel="icon" href="https://nicoleswinburn.github.io/favicon.png">
+
+  
+  
+  <link rel="stylesheet" href="/css/style.min.df52c7c8fb17040fdfb216293b7a711034ee517647a54f8a626ea24f0382f02b.css">
+  
+
+  
+
+</head>
+
+<body class='page page-default-single'>
+  <div id="main-menu-mobile" class="main-menu-mobile">
+  <ul>
+    
+    
+    <li class="menu-item-inicio">
+      <a href="/">
+        <span>Inicio</span>
+      </a>
+    </li>
+    
+    <li class="menu-item-documentación">
+      <a href="/docs/">
+        <span>Documentación</span>
+      </a>
+    </li>
+    
+  </ul>
+</div>
+  <div class="wrapper">
+    <div class='header'>
+  <div class="container">
+    <div class="logo">
+      <a href="https://nicoleswinburn.github.io/"><img alt="Logo" src="/images/logo.png" /></a>
+    </div>
+    <div class="logo-mobile">
+      <a href="https://nicoleswinburn.github.io/"><img alt="Logo" src="/images/logo.png" /></a>
+    </div>
+    <div id="main-menu" class="main-menu">
+  <ul>
+    
+    
+    <li class="menu-item-inicio">
+      <a href="/">
+        <span>Inicio</span>
+      </a>
+    </li>
+    
+    <li class="menu-item-documentación">
+      <a href="/docs/">
+        <span>Documentación</span>
+      </a>
+    </li>
+    
+  </ul>
+</div>
+    <button id="toggle-main-menu-mobile" class="hamburger hamburger--slider" type="button">
+  <span class="hamburger-box">
+    <span class="hamburger-inner"></span>
+  </span>
+</button>
+  </div>
+</div>
+
+
+    
+    
+    
+    
+    
+    
+
+    
+    <div class="container pt-2 pt-md-6 pb-3 pb-md-6">
+      <div class="row">
+        <div class="col-12 col-md-3 mb-3">
+          <div class="sidebar">
+            
+<div class="docs-menu">
+  <h4>Documentación</h4>
+  <ul>
+    
+    <li class="">
+      <a href="https://nicoleswinburn.github.io/docs/01-planimetr%C3%ADas-silla-plywood/">01 Planimetrías Silla Plywood</a>
+    </li>
+    
+    <li class="">
+      <a href="https://nicoleswinburn.github.io/docs/02-mecanizado-cnc-silla-fresia/">02 Mecanizado CNC Silla Fresia</a>
+    </li>
+    
+    <li class="">
+      <a href="https://nicoleswinburn.github.io/docs/03-mecanizado-cnc-2.5d-respaldo/">03 Mecanizado CNC 2.5D - Respaldo</a>
+    </li>
+    
+    <li class="">
+      <a href="https://nicoleswinburn.github.io/docs/04-bonus-layer-chair/">04 Bonus Mecanizado Layer Chair</a>
+    </li>
+    
+    <li class="">
+      <a href="https://nicoleswinburn.github.io/docs/05-ultrabonus-eco-macetero/">05 Ultrabonus Eco-Macetero</a>
+    </li>
+    
+    <li class="">
+      <a href="https://nicoleswinburn.github.io/docs/06-molde-3d-macetero-grupal/">06 Molde 3D Macetero (Grupal)</a>
+    </li>
+    
+    <li class="active ">
+      <a href="https://nicoleswinburn.github.io/docs/07-molde-3d-macetero-v.2-grupal/">07 Molde 3D Macetero v.2 (Grupal)</a>
+    </li>
+    
+  </ul>
+</div>
+
+          </div>
+        </div>
+        <div class="col-12 col-md-9">
+          
+<h1 class="title">07 Molde 3D Macetero v.2 (Grupal)</h1>
+<div class="content ">
+  <h2 id="construcción-macetero-orgánico-v2">Construcción Macetero Orgánico v.2</h2>
+<p>En este post, daremos a conocer el proceso de modelado de la segunda versión que creamos para un macetero orgánico. Cabe destacar que antes de decidirnos por este, pasamos por muchas otras versiones que fallaron al momento de llevarlas al programa de impresión 3D por temas de forma.</p>
+<p>Primero explicaremos que materiales utilizados en las distintas mezclas, junto con la investigación de las propiedades de estos. Luego, procederemos a mostrar el proceso de creación de cada macetero, para finalizar con la modelación 3D del molde y contra-molde que se imprimirán en una impresora 3D.</p>
+<p><img src="/img/07_v.2/render2.jpg" alt="Render1">
+<img src="/img/07_v.2/render.png" alt="Render2"></p>
+<hr>
+<h2 id="índice">Índice</h2>
+<p><a href="#investigaci%C3%B3n-de-materiales">• Investigación de Materiales</a></p>
+<p><a href="#proceso-de-construcci%C3%B3n-del-macetero-org%C3%A1nico">• Proceso de construcción del macetero orgánico</a></p>
+<p><a href="#modelaci%C3%B3n-3d-molde-y-contra-molde">• Modelación 3D molde y contra-molde</a></p>
+<p><a href="#estimaci%C3%B3n-de-tiempos-y-material-para-impresi%C3%B3n-3d">• Estimación de tiempos y material para impresión 3D</a></p>
+<p><a href="#modelo-3d">• Modelo 3D</a></p>
+<hr>
+<h2 id="investigación-de-materiales">Investigación de Materiales</h2>
+<p>Los materiales utilizados en cada una de las mezclas son los siguientes:</p>
+<table>
+<thead>
+<tr>
+<th>Mezcla</th>
+<th>Materiales</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Mezcla N°1</td>
+<td>Cartón + Café + Té + 3 huevos + Cacao Orgánico</td>
+</tr>
+<tr>
+<td>Mezcla N°2</td>
+<td>Cartón + Café + Cáscara de Palta + Cáscara de Plátano + Maicena para pegar</td>
+</tr>
+<tr>
+<td>Mezcla N°3</td>
+<td>Cartón + Té + Guano de Cabra + Maicena para pegar</td>
+</tr>
+</tbody>
+</table>
+<h4 id="propiedades-de-los-materiales">Propiedades de los materiales</h4>
+<p><strong>Cartón</strong></p>
+<p>El cartón es un material que resulta de la superposición de capas de papel constituidas por fibra virden o papel reciclado. La cantidad de capas es la que determina su resistencia y, además, es biodegradable.</p>
+<p>El papel de cartón se puede utilizar como base con la técnica de papel maché, la cual es una técnica artesanal antigua que se origina en China, la India y Persia. Esta consiste en dejar mecerando el papel, previamente cortado en pedacitos, con agua. Luego se cuela el agua y se mezcla con algún pegamento para el uso que se le quiera dar.</p>
+<p><img src="/img/07_v.2/carton.png" alt="Material"></p>
+<p><strong>Maicena</strong></p>
+<p>La maicena se obtiene de los granos de maíz al igual que la harina. Primero se retira la cáscara de los granos, luego se retira el germen. Para el molido de los granos, primero se debe mojar el maíz para que fermente y después es machacado y lavado para retirar el almidón. Este último paso es vital para la consistencia de la maicena ya que el almidón influye en la textura de los alimentos. Por lo tanto, como pegamento utilizaremos un engrudo de maicena con agua.</p>
+<p><img src="/img/07_v.2/maicena.png" alt="Material"></p>
+<p><strong>Café</strong></p>
+<p>El café tiene una gran cantidad de beneficios tanto para la tierra como para las plantas, dentro de ellas se encuentra la característica de que es rico en minerales y nutrientes cómo Nitrógeno, Calcio, Potasio, Fósforo, Magnesio y su PH (6-7) no acidificará en exceso la tierra si se utiliza con prudencia.</p>
+<p>Los granos de café compostados <strong>aumentan el nivel de nitrógeno de la planta y enriquecen la tierra</strong>, por lo que utilizar regularmente café ayuda a que no se necesite agregar compost, ya que la tierra estará más fertilizada de manera natural.</p>
+<p>Algunos otros beneficios del café para huertos:</p>
+<ul>
+<li>Ahuyenta a los gatos.</li>
+<li>Antihongos. El café es un excelente absorbente de humedad, por lo que es un buen fungicida de las plagas más comunes de hongos.</li>
+<li>Combate caracoles, hormigas y babosas. El olor y la acidez ahuyentarán a estos invasores permanentes en la huerta.</li>
+</ul>
+<p><img src="/img/07_v.2/cafe.png" alt="Material"></p>
+<p><strong>Té</strong></p>
+<p>El té contiene un 4,15% de nitrógeno y algunos nutrientes más. También sirve para mejorar la estructura y el drenaje del suelo. Además el tanino que contiene puede ayudar a reducir el pH del suelo haciéndolo más ácido al igual que hacen los posos del café. La reducción del pH mejora el rendimiento de las raíces de las plantas, lo que aumenta la absorción de nutrientes y estimula el crecimiento de brotes, tallos y hojas.</p>
+<p>Por otro lado, sirve para eliminar las malezas, combate los hongos, germina tus semillas y ayuda que retener el agua.</p>
+<p><img src="/img/07_v.2/te.png" alt="Material"></p>
+<p><strong>Huevo</strong></p>
+<ol>
+<li>Yema y Clara de Huevo</li>
+</ol>
+<p>El contenido de la yema de huevo es rico en calcio. Esto ayuda a que las plantas germinen y evita que las raices se pudran.</p>
+<p>Por otro lado, la clara de huevo sirve como aglutinante natural efectivo, en otras palabras, puede actuar como sustituto del pegamento al pegar papel o cartón ligero juntos.</p>
+<ol start="2">
+<li>Cáscara de Huevo</li>
+</ol>
+<p>La cáscara de huevo tiene múltiples usos en la tierra. Está compuesta en un 98% de <em>carbonato de calcio</em>, que es un nutriente mineral muy importante que interviene en el desarrollo celular de las plantas.</p>
+<p>Si bien no es uno de los nutrientes principales que necesitan las plantas (nitrógeno, fósforo y potasio sí lo son), es importante que no haya carencia de este, puesto que se pueden producir enfermedades. Los síntomas de la deficiencia de calcio aparecen primero en las hojas y tejidos jóvenes, el crecimiento se inhibe y las plantas toman la apariencia de un arbusto.</p>
+<p>Como hemos apuntado, <strong>las cáscaras de huevo son ricas en calcio</strong>, mientras los posos de café proporcionan nitrógeno, ambos hacen un complemento perfecto para enriquecer la tierra de jardín. Una cosa a tener en cuenta y que es muy importante, es que tampoco debemos abusar de este tipo de abono puesto que si echamos en muy grandes cantidades, podemos cambiar el Ph de la tierra volviendolo más básico.</p>
+<p><img src="/img/07_v.2/huevo.png" alt="Material"></p>
+<p><strong>Cacao Orgánico</strong></p>
+<p>El cacao orgánico es biodinámico, libre de fertilizantes sintéticos, herbicidas o pesticidas y, además, es sostenible. Este alimento posee distintos compuestos que, además de ser beneficiosos para el ser humano, también lo son para las plantas y la tierra. Por ejemplo, el <em>magnesio</em>, el cual es un nutriente esencial para las plantas. Es un componente clave para una gran cantidad de funciones en los vegetales, siendo uno de sus principales papeles el proceso de fotosíntesis, ya que es un componente básico de la clorofila, la molécula que da el color verde a las plantas.</p>
+<p>La deficiencia de magnesio, puede ser un factor importante que limita la producción de cultivos. Las cantidades de magnesio que la planta puede absorber dependen en su concentración en la solución del suelo. Así como en la capacidad del suelo para reponer la solución del suelo con magnesio.</p>
+<p>Por otro lado, el cacao orgánico también posee una toxina natural llamada <em>teobromina</em>, la cual tiene una estructura similar a la de la cafeína, y es altamente tóxica para algunos animales domésticos, por lo que si se hace un macetero de este tipo, hay que tener cuidado con las mascotas.</p>
+<p><img src="/img/07_v.2/cacao.png" alt="Material"></p>
+<p><strong>Cáscara de Palta</strong></p>
+<p>Sirven como abono para las plantas. Si cortas las cáscaras en tiras y las colocas cerca de las semillas de alguna planta, éstas crecerán rápido y fuertes. Y si la planta ya ha crecido, nutrirá la tierra y la llenará de vitaminas y minerales ideales para que siga creciendo. Los nutrientes del aguacate que quedan en la cáscara alimientarán a las semillas, que crecerán increíblemente sanas y fuertes.</p>
+<p><img src="/img/07_v.2/palta.png" alt="Material"></p>
+<p><strong>Cáscara de Plátano</strong></p>
+<p>La cáscara de plátano tiene múltiples beneficios para las plantas. Su importancia estriba en las cantidades de potasio que contiene. Precisamente este mineral transporta los nutrientes por las plantas y fortalece la formación de flores y frutos. Normalmente se puede identificar de forma sencilla cuando la planta tiene falta de potasio: si las hojas se ponen amarillentas o rizadas es porque carecen de este elemento.</p>
+<p><img src="/img/07_v.2/platano.png" alt="Material"></p>
+<p><strong>Guano de Cabra</strong></p>
+<p>El guano de cabra aporta los principales macro-nutrientes para los cultivos industriales, reduciendo deficiencias nutricionales y mejorando la calidad de suelos degradados. Es uno de los más ricos en nutrientes que podrás encontrar. De hecho, contiene alrededor de 7% de nitrógeno, 2% de fósforo, 10% de potasio además de todos los oligoelementos. Y por si fuera poco, suele llevar también pelos del animal, lo que le aporta más nitrógeno.</p>
+<p><img src="/img/07_v.2/guano.png" alt="Material"></p>
+<p><a href="#top">▲ Volver Arriba</a></p>
+<hr>
+<h2 id="proceso-de-construcción-del-macetero-orgánico">Proceso de construcción del macetero orgánico</h2>
+<h4 id="mezcla-n1">Mezcla N°1</h4>
+<p>Materiales:</p>
+<ul>
+<li>Cartón</li>
+<li>Café</li>
+<li>Té</li>
+<li>Yema y clara de huevo</li>
+<li>Cáscara de huevo</li>
+<li>Cacao orgánico</li>
+</ul>
+<p>Con los materiales anteriormente mencionados e investigados, realizamos la prueba de estos creando dos maceteros. Para esto el proceso fue el siguiente:</p>
+<p>Paso 1: Los cartones remojados los molimos con el agua de manera que quede una pasta. En este proceso nos tardamos unos 10 minutos para lograr que los cartones quedaran completamente molidos. Luego de esto los estrujamos con un paño para sacar toda el agua.</p>
+<p><img src="/img/07_v.2/fotospasos-02.png" alt="proceso"></p>
+<p>Paso 2: Por otro lado, molimos los demás componentes secos (cáscara de 3 huevos, te, café y chocolate). Después como aglutinante usamos la yema y clara de los huevos y lo mezclamos con los componentes secos. Finalmente agregamos los cartones estrujados para formar la pasta final.</p>
+<p><img src="/img/07_v.2/fotospasos-04.png" alt="proceso"></p>
+<p>Paso 3: La mezcla final la pusimos en molde previamente forrado con alusa plasta para que sea fácil removerlos una vez secos. Cuando estaban moderadamente secos los desmoldamos para que se terminaran de secar.</p>
+<p><img src="/img/07_v.2/fotospasos-03.png" alt="proceso"></p>
+<h4 id="mezcla-n2">Mezcla N°2</h4>
+<p>Materiales:</p>
+<ul>
+<li>Cartón</li>
+<li>Café</li>
+<li>Cáscara de Palta</li>
+<li>Cáscara de Plátano</li>
+<li>Maicena para pegar</li>
+</ul>
+<p>Paso 1: Cortamos papel de cartón en pequeños pedazos y los pusimos a remojar en agua hirviendo por alrededor de dos días. Una vez remojados se deben moler con una mini primer o máquina 123. La consistencia debe ser como la que se muestra en las imágenes. Luego de triturar la mezcla, la pasamos por un colador para quitar los excesos de agua.</p>
+<p>Paso 2: Añadimos a la masa una mezcla de café, cáscaras de palta y cáscara de platano. Se debe volver a mezclar la masa, pudiendo usarse nuevamente la máquina.</p>
+<p>Paso 3: Dejamos reposar la masa y preparamos un pegamento casero. A fuego lento se debe juntar un poco de maicena y agua. Se bate y luego se deja enfriar hasta obtener la consistencia mostrada a continuación. Mezclamos el pegamento con la mezcla de papel, hasta que quede todo bien compacto. Por último, en algún recipiente introducimos la mezcla y dejamos secar.</p>
+<h4 id="mezcla-n3">Mezcla N°3</h4>
+<p>Materiales:</p>
+<ul>
+<li>Cartón</li>
+<li>Té</li>
+<li>Guano de Cabra</li>
+<li>Maicena para pegar</li>
+</ul>
+<p>Paso 1: Al igual que en el macetero anterior, pusimos a remojar pequeños trozos de cartón y una vez remojados se deben moler con una mini primer o máquina 123. Luego triturla, se pasa por un colador para quitar los excesos de agua.</p>
+<p>Paso 2: Añadimos a la masa una mezcla de té y guano de cabra. Se debe volver a mezclar la masa, pudiendo usarse nuevamente la máquina.</p>
+<p>Paso 3: Se repite el paso 3 de la mezcla 2.</p>
+<p><a href="#top">▲ Volver Arriba</a></p>
+<hr>
+<h2 id="modelación-3d-molde-y-contra-molde">Modelación 3D molde y contra-molde</h2>
+<p>A partir del primer molde que creamos y con el feedback del profesor, pudimos notar que teníamos ciertos errores que podrían afectar al momento de la impresión de dichos moldes o cuando quisiéramos retirar la mezcla convertida en macetero.</p>
+<p>Consideramos pequeños detalles que no habíamos notado anteriormente, como por ejemplo el hecho de que el macetero no puede ser recto, es decir, los ángulos no pueden ser de 90° debido a que por el roce puede que se desarme el macetero al extraerlo del molde. Además, nos dimos cuenta que la manilla que le colocamos al contramolde no podía imprimirse adecuadamente, ya que quedaría &ldquo;flotando&rdquo;, es decir, al no tener material por debajo, no tendría con qué sostenerse y por gravedad se caería en medio de la impresión.</p>
+<p>Por lo tanto, creamos un nuevo macetero que consiste en 3 maceteros pequeños, uno al lado del otro, con la intención de que compartan tierra entre ellos. La forma de se hizo con un ángulo un poco más inclinado hacia afuera para evitar el roce anteriormente mencionado. Teniendo esto listo, procedimos a la modelación de molde y contramolde, resultando un molde que rectangular con perillas que se encajan, el cual se imprimirá &ldquo;de espaldas&rdquo; para evitar problemas con la gravedad al momento de imprimir las perillas. Por otro lado, el contramolde lo modelamos como un estilo de tapa rellena debido a la misma situación.</p>
+<p>Volviendo al tema de la forma del macetero, hicimos el molde del macetero con 3 compartimientos de manera de que queden 3 plantas juntas. Hay plantas que juntas se ayudan mutuamente en su crecimiento, se protegen contra plagas y producen más.</p>
+<p>Existen distintas combinaciones de plantas entre ellas:</p>
+<ol>
+<li>
+<p><em>Trilogía azteca o las 3 hermanas:</em>  Este grupo de plantas amigas está compuesto por tres hortalizas, que los aztecas cultivaron juntas hace ya más de 2.500 años, ellas son:</p>
+<ul>
+<li>Choclo o maíz.</li>
+<li>Porotos  o frijoles (que sean trepadores).</li>
+<li>Zapallos  pudiendo ser también, pepino de ensalada, sandía, melón, calabaza, etc.).</li>
+</ul>
+</li>
+<li>
+<p><em>Grupo de plantas amigas del tomate:</em> En vez de plantar los tomates sólos, intercalarlos con:</p>
+<ul>
+<li>Albahaca</li>
+<li>Clavelón  o chinchihue, para controlar los nemátodos.</li>
+<li>Espuela de galán (enana)</li>
+<li>Orégano una o dos plantas.</li>
+<li>Lechuga intercaladas con las cebollas.</li>
+<li>Cebolla  intercaladas con las lechugas.</li>
+<li>Ajos; en los bordes de la cama</li>
+<li>Maravilla o papa tupinamburg en los bordes.</li>
+</ul>
+</li>
+<li>
+<p><em>Plantas amigas para el control de plagas:</em></p>
+<ul>
+<li>Familia de la cebolla: cebolla, ajo, cebollín, cibulet, puerro.</li>
+<li>Hierbas medicinales y culinarias: Orégano, romero, tomillo, salvia, albahaca, ruda, menta,  toronjil, lavanda etc.</li>
+<li>Flores: especialmente el  chinchihue o clavelón, espuela de galán, caléndula, crisantemo,maravilla, rosas,cardenales, etc.</li>
+</ul>
+</li>
+</ol>
+<p><img src="/img/07_v.2/amigas.jpeg" alt="amigas"></p>
+<p><em>Fuente: <a href="https://www.nuevamujer.com/bienestar/2012/11/05/plantas-amigas-parte-1-consejos-para-saber-quien-con-quien-se-lleva-bien-en-la-huerta.html">https://www.nuevamujer.com/bienestar/2012/11/05/plantas-amigas-parte-1-consejos-para-saber-quien-con-quien-se-lleva-bien-en-la-huerta.html</a></em></p>
+<h4 id="planimetrías">Planimetrías</h4>
+<h6 id="molde-positivo">Molde positivo</h6>
+<p><img src="/img/07_v.2/plani3.png" alt="plani"></p>
+<h6 id="molde-negativo">Molde negativo</h6>
+<p><img src="/img/07_v.2/plani1.png" alt="plani"></p>
+<h6 id="macetero">Macetero</h6>
+<p><img src="/img/07_v.2/plani2.png" alt="plani"></p>
+<h6 id="detalle">Detalle</h6>
+<p><img src="/img/07_v.2/plani4.png" alt="plani"></p>
+<h6 id="encaje-piezas">Encaje Piezas</h6>
+<p><img src="/img/07_v.2/make2d.png" alt="plani"></p>
+<p><a href="#top">▲ Volver Arriba</a></p>
+<hr>
+<h2 id="estimación-de-tiempos-y-material-para-impresión-3d">Estimación de tiempos y material para impresión 3D</h2>
+<p>Con ayuda del tutorial, notamos que el programa <em>Ultimaker Cura 4.6</em> no es tan complicado de utilizar y es bastante intuitivo. Gracias a esto fue que descubrimos algunos de nuestros errores del molde anterior, los cuales mencionamos más arriba.</p>
+<p>Estuvimos probando algunos tamaños de cada capa y distintas densidades, logrando entender que cuánto más bajos son esos números, entonces menos material se utiliza, por lo que la impresión demora menos. A pesar de eso, decidimos quedarnos con un grosor de layer de 0.32 mm y una densidad de 6%, porque sentimos que si lo disminuimos más, la pieza puede ser muy endeble y romperse fácilmente.</p>
+<p><img src="/img/07_v.2/3d-05.png" alt="impresion"></p>
+<p>Como se puede ver en la imagen, las dos partes del molde negativo se colocan con la &ldquo;espalda&rdquo; hacia el suelo y el contramolde se coloca de manera invertida, dejando en ambos casos la parte más plana del molde en el suelo de la impresora y evitando problemas con la gravedad al imprimir.</p>
+<p><a href="#top">▲ Volver Arriba</a></p>
+<hr>
+<h2 id="modelo-3d">Modelo 3D</h2>
+<div>
+    <iframe 
+    src="https://alumnos2187.autodesk360.com/shares/public/SH56a43QTfd62c1cd9683cec48884fa88711?mode=embed" 
+    width="100%" 
+    height="450" 
+    allowfullscreen="true" 
+    webkitallowfullscreen="true" 
+    mozallowfullscreen="true"  
+    frameborder="0">
+    </iframe>    
+</div>
+
+
+<p><a href="#top">▲ Volver Arriba</a></p>
+
+</div>
+</div>
+
+        </div>
+      </div>
+    </div>
+    
+  </div>
+
+  <div class="sub-footer">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <div class="sub-footer-inner">
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+  
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/scripts.min.1237ff71925bb8625c97a9af8db4c54525258bedfd7c47493daaff723bea755e.js"></script>
+  
+
+  
+  
+  
+    
+  
+
+
+</body>
+
+</html>
