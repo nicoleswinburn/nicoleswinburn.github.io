@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>07 Moldes 3D Macetero (Grupal) - Nicole Swinburn</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <link rel="icon" href="https://nicoleswinburn.github.io/favicon.png">
+
+  
+  
+  <link rel="stylesheet" href="/css/style.min.df52c7c8fb17040fdfb216293b7a711034ee517647a54f8a626ea24f0382f02b.css">
+  
+
+  
+
+</head>
+
+<body class='page page-default-single'>
+  <div id="main-menu-mobile" class="main-menu-mobile">
+  <ul>
+    
+    
+    <li class="menu-item-inicio">
+      <a href="/">
+        <span>Inicio</span>
+      </a>
+    </li>
+    
+    <li class="menu-item-documentación">
+      <a href="/docs/">
+        <span>Documentación</span>
+      </a>
+    </li>
+    
+  </ul>
+</div>
+  <div class="wrapper">
+    <div class='header'>
+  <div class="container">
+    <div class="logo">
+      <a href="https://nicoleswinburn.github.io/"><img alt="Logo" src="/images/logo.png" /></a>
+    </div>
+    <div class="logo-mobile">
+      <a href="https://nicoleswinburn.github.io/"><img alt="Logo" src="/images/logo.png" /></a>
+    </div>
+    <div id="main-menu" class="main-menu">
+  <ul>
+    
+    
+    <li class="menu-item-inicio">
+      <a href="/">
+        <span>Inicio</span>
+      </a>
+    </li>
+    
+    <li class="menu-item-documentación">
+      <a href="/docs/">
+        <span>Documentación</span>
+      </a>
+    </li>
+    
+  </ul>
+</div>
+    <button id="toggle-main-menu-mobile" class="hamburger hamburger--slider" type="button">
+  <span class="hamburger-box">
+    <span class="hamburger-inner"></span>
+  </span>
+</button>
+  </div>
+</div>
+
+
+    
+    
+    
+    
+    
+    
+
+    
+    <div class="container pt-2 pt-md-6 pb-3 pb-md-6">
+      <div class="row">
+        <div class="col-12 col-md-3 mb-3">
+          <div class="sidebar">
+            
+<div class="docs-menu">
+  <h4>Documentación</h4>
+  <ul>
+    
+    <li class="">
+      <a href="https://nicoleswinburn.github.io/docs/01-planimetr%C3%ADas-silla-plywood/">01 Planimetrías Silla Plywood</a>
+    </li>
+    
+    <li class="">
+      <a href="https://nicoleswinburn.github.io/docs/02-mecanizado-cnc-silla-fresia/">02 Mecanizado CNC Silla Fresia</a>
+    </li>
+    
+    <li class="">
+      <a href="https://nicoleswinburn.github.io/docs/03-mecanizado-cnc-2.5d-respaldo/">03 Mecanizado CNC 2.5D - Respaldo</a>
+    </li>
+    
+    <li class="">
+      <a href="https://nicoleswinburn.github.io/docs/04-bonus-layer-chair/">04 Bonus Mecanizado Layer Chair</a>
+    </li>
+    
+    <li class="">
+      <a href="https://nicoleswinburn.github.io/docs/05-ultrabonus-eco-macetero/">05 Ultrabonus Eco-Macetero</a>
+    </li>
+    
+    <li class="">
+      <a href="https://nicoleswinburn.github.io/docs/06-materiales-y-experimentaci%C3%B3n-grupal/">06 Materiales y Experimentación (Grupal)</a>
+    </li>
+    
+    <li class="active ">
+      <a href="https://nicoleswinburn.github.io/docs/07-moldes-3d-macetero-grupal/">07 Moldes 3D Macetero (Grupal)</a>
+    </li>
+    
+  </ul>
+</div>
+
+          </div>
+        </div>
+        <div class="col-12 col-md-9">
+          
+<h1 class="title">07 Moldes 3D Macetero (Grupal)</h1>
+<div class="content ">
+  <h2 id="construcción-macetero-orgánico--versión-1">Construcción Macetero Orgánico | Versión 1</h2>
+<p>En la primera parte del post, daremos a conocer el proceso de modelado de un macetero orgánico. Primero explicaremos que materiales utilizaremos para la creación del macetero y luego el proceso del modelado del molde.</p>
+<p><img src="/img/07_modelado3d/render1.png" alt="Render1">
+<img src="/img/07_modelado3d/render2.png" alt="Render2"></p>
+<hr>
+<h2 id="proceso-modelado-3d">Proceso modelado 3D</h2>
+<p>Hicimos el modelado en el programa Rhinoceros 3D. Para comenzar, el primer paso fue modelar el macetero. Para esto, creamos curvas con el diseño preestablecido y las medidas que queríamos que este tuviera. Las bases son de 80 mm x 80 mm, con una altura de 80 mm.</p>
+<p><img src="/img/07_modelado3d/Archivo/rhino-15.png" alt="Imagen1curvas"></p>
+<p>Luego aplicamos un <strong>loft</strong> a las curvas para crear la superficie.</p>
+<p><img src="/img/07_modelado3d/Archivo/rhino-16.png" alt="Imagen2loft"></p>
+<p>Con el comando <strong>cap</strong>, rellenamos la figura para obtener un objeto sólido, al cuál le aplicamos un <strong>shell</strong> de 7 mm para convertirlo en un objeto sólido pero hueco.</p>
+<p><img src="/img/07_modelado3d/Archivo/rhino-17.png" alt="Imagen3shell"></p>
+<p>Teniendo el macetero listo, procedimos a crear el molde de este. Para esto, dibujamos un cubo un poco más grande que el macetero para que lo contuviera dentro y realizamos un <strong>boolean difference</strong> entre estas dos piezas.</p>
+<p><img src="/img/07_modelado3d/Archivo/rhino-18.png" alt="Imagen4booleandif"></p>
+<p>El resultado del paso anterior, son dos piezas (aparte del macetero): el molde exterior del macetero, que vendría siendo el molde negativo, y el contra-molde, que sería el molde positivo.
+Primero tomamos el molde exterior y lo separamos por la mitad con el comando <strong>split</strong> y le agregamos unos pequeños tabs redondos para que se mantenga firme cuando se esté formando el macetero.</p>
+<p><img src="/img/07_modelado3d/Archivo/rhino-19.png" alt="Imagen5split"></p>
+<p>Luego, tomamos la contraparte del molde, le agregamos dos cilindros en la parte inferior que ayudarán a crear dos pequeños orificios para que cuando la planta sea regada el agua pueda filtrar y no se ahogue la planta. Además, le creamos una manilla para poder facilitar el agarre y sustracción de dicha parte al momento de separar el molde y obtener el macetero.</p>
+<p><img src="/img/07_modelado3d/Archivo/rhino-20.png" alt="Imagen6y7contrap"></p>
+<p>Y este sería el resultado obtenido:</p>
+<p><img src="/img/07_modelado3d/Archivo/rhino-21.png" alt="Imagen8"></p>
+<p><a href="#top">▲ Volver Arriba</a></p>
+<hr>
+<h2 id="planimetrías">Planimetrías</h2>
+<h4 id="molde-positivo">Molde positivo</h4>
+<p><img src="/img/07_modelado3d/planimetria4.png" alt="Planimetria4"></p>
+<h4 id="molde-negativo">Molde negativo</h4>
+<p><img src="/img/07_modelado3d/planimetria2.png" alt="Planimetria2"></p>
+<h4 id="macetero">Macetero</h4>
+<p><img src="/img/07_modelado3d/planimetria1.png" alt="Planimetria1"></p>
+<h4 id="detalle">Detalle</h4>
+<p><img src="/img/07_modelado3d/planimetria3.png" alt="Planimetria3"></p>
+<p><a href="#top">▲ Volver Arriba</a></p>
+<hr>
+<h2 id="encaje-de-las-piezas">Encaje de las piezas</h2>
+<p><img src="/img/07_modelado3d/make2dmacetero.png" alt="make2d"></p>
+<p><a href="#top">▲ Volver Arriba</a></p>
+<hr>
+<h2 id="modelo-3d--versión-1">Modelo 3D | Versión 1</h2>
+<div>
+    <iframe 
+    src="https://alumnos2187.autodesk360.com/shares/public/SH56a43QTfd62c1cd9681419437f4ae93d03?mode=embed" 
+    width="100%" 
+    height="450" 
+    allowfullscreen="true" 
+    webkitallowfullscreen="true" 
+    mozallowfullscreen="true"  
+    frameborder="0">
+    </iframe>    
+</div>
+
+
+<p><a href="#top">▲ Volver Arriba</a></p>
+<hr>
+<h2 id="construcción-macetero-orgánico--versión-final">Construcción Macetero Orgánico | Versión Final</h2>
+<p>En la segunda parte de este post, daremos a conocer el proceso de modelado de la segunda versión que creamos para un macetero orgánico. Cabe destacar que antes de decidirnos por este, pasamos por muchas otras versiones que fallaron al momento de llevarlas al programa de impresión 3D por temas de forma.</p>
+<p><img src="/img/07_v.2/render2.jpg" alt="Render1">
+<img src="/img/07_v.2/render.png" alt="Render2"></p>
+<hr>
+<h2 id="modelación-3d-molde-y-contra-molde">Modelación 3D molde y contra-molde</h2>
+<p>A partir del primer molde que creamos y con el feedback del profesor, pudimos notar que teníamos ciertos errores que podrían afectar al momento de la impresión de dichos moldes o cuando quisiéramos retirar la mezcla convertida en macetero.</p>
+<p>Consideramos pequeños detalles que no habíamos notado anteriormente, como por ejemplo el hecho de que el macetero no puede ser recto, es decir, los ángulos no pueden ser de 90° debido a que por el roce puede que se desarme el macetero al extraerlo del molde. Además, nos dimos cuenta que la manilla que le colocamos al contramolde no podía imprimirse adecuadamente, ya que quedaría &ldquo;flotando&rdquo;, es decir, al no tener material por debajo, no tendría con qué sostenerse y por gravedad se caería en medio de la impresión.</p>
+<p>Por lo tanto, creamos un nuevo macetero que consiste en 3 maceteros pequeños, uno al lado del otro, con la intención de que compartan tierra entre ellos. La forma de se hizo con un ángulo un poco más inclinado hacia afuera para evitar el roce anteriormente mencionado. Teniendo esto listo, procedimos a la modelación de molde y contramolde, resultando un molde que rectangular con perillas que se encajan, el cual se imprimirá &ldquo;de espaldas&rdquo; para evitar problemas con la gravedad al momento de imprimir las perillas. Por otro lado, el contramolde lo modelamos como un estilo de tapa rellena debido a la misma situación.</p>
+<p>Volviendo al tema de la forma del macetero, hicimos el molde del macetero con 3 compartimientos de manera de que queden 3 plantas juntas. Hay plantas que juntas se ayudan mutuamente en su crecimiento, se protegen contra plagas y producen más.</p>
+<p>Existen distintas combinaciones de plantas entre ellas:</p>
+<ol>
+<li>
+<p><em>Trilogía azteca o las 3 hermanas:</em>  Este grupo de plantas amigas está compuesto por tres hortalizas, que los aztecas cultivaron juntas hace ya más de 2.500 años, ellas son:</p>
+<ul>
+<li>Choclo o maíz.</li>
+<li>Porotos  o frijoles (que sean trepadores).</li>
+<li>Zapallos  pudiendo ser también, pepino de ensalada, sandía, melón, calabaza, etc.).</li>
+</ul>
+</li>
+<li>
+<p><em>Grupo de plantas amigas del tomate:</em> En vez de plantar los tomates sólos, intercalarlos con:</p>
+<ul>
+<li>Albahaca</li>
+<li>Clavelón  o chinchihue, para controlar los nemátodos.</li>
+<li>Espuela de galán (enana)</li>
+<li>Orégano una o dos plantas.</li>
+<li>Lechuga intercaladas con las cebollas.</li>
+<li>Cebolla  intercaladas con las lechugas.</li>
+<li>Ajos; en los bordes de la cama</li>
+<li>Maravilla o papa tupinamburg en los bordes.</li>
+</ul>
+</li>
+<li>
+<p><em>Plantas amigas para el control de plagas:</em></p>
+<ul>
+<li>Familia de la cebolla: cebolla, ajo, cebollín, cibulet, puerro.</li>
+<li>Hierbas medicinales y culinarias: Orégano, romero, tomillo, salvia, albahaca, ruda, menta,  toronjil, lavanda etc.</li>
+<li>Flores: especialmente el  chinchihue o clavelón, espuela de galán, caléndula, crisantemo,maravilla, rosas,cardenales, etc.</li>
+</ul>
+</li>
+</ol>
+<p><img src="/img/07_v.2/amigas.jpeg" alt="amigas"></p>
+<p><em>Fuente: <a href="https://www.nuevamujer.com/bienestar/2012/11/05/plantas-amigas-parte-1-consejos-para-saber-quien-con-quien-se-lleva-bien-en-la-huerta.html">https://www.nuevamujer.com/bienestar/2012/11/05/plantas-amigas-parte-1-consejos-para-saber-quien-con-quien-se-lleva-bien-en-la-huerta.html</a></em></p>
+<p><a href="#top">▲ Volver Arriba</a></p>
+<hr>
+<h2 id="planimetrías-1">Planimetrías</h2>
+<h4 id="molde-positivo-1">Molde positivo</h4>
+<p><img src="/img/07_v.2/plani3.png" alt="plani"></p>
+<h4 id="molde-negativo-1">Molde negativo</h4>
+<p><img src="/img/07_v.2/plani1.png" alt="plani"></p>
+<h4 id="macetero-1">Macetero</h4>
+<p><img src="/img/07_v.2/plani2.png" alt="plani"></p>
+<h4 id="detalle-1">Detalle</h4>
+<p><img src="/img/07_v.2/plani4.png" alt="plani"></p>
+<h4 id="encaje-piezas">Encaje Piezas</h4>
+<p><img src="/img/07_v.2/make2d.png" alt="plani"></p>
+<p><a href="#top">▲ Volver Arriba</a></p>
+<hr>
+<h2 id="estimación-de-tiempos-y-material-para-impresión-3d">Estimación de tiempos y material para impresión 3D</h2>
+<p>Con ayuda del tutorial, notamos que el programa <em>Ultimaker Cura 4.6</em> no es tan complicado de utilizar y es bastante intuitivo. Gracias a esto fue que descubrimos algunos de nuestros errores del molde anterior, los cuales mencionamos más arriba.</p>
+<p>Estuvimos probando algunos tamaños de cada capa y distintas densidades, logrando entender que cuánto más bajos son esos números, entonces menos material se utiliza, por lo que la impresión demora menos. A pesar de eso, decidimos quedarnos con un grosor de layer de 0.32 mm y una densidad de 6%, porque sentimos que si lo disminuimos más, la pieza puede ser muy endeble y romperse fácilmente.</p>
+<p><img src="/img/07_v.2/3d-05.png" alt="impresion"></p>
+<p>Como se puede ver en la imagen, las dos partes del molde negativo se colocan con la &ldquo;espalda&rdquo; hacia el suelo y el contramolde se coloca de manera invertida, dejando en ambos casos la parte más plana del molde en el suelo de la impresora y evitando problemas con la gravedad al imprimir.</p>
+<p><a href="#top">▲ Volver Arriba</a></p>
+<hr>
+<h2 id="modelo-3d--versión-final">Modelo 3D | Versión Final</h2>
+<div>
+    <iframe 
+    src="https://alumnos2187.autodesk360.com/shares/public/SH56a43QTfd62c1cd9683cec48884fa88711?mode=embed" 
+    width="100%" 
+    height="450" 
+    allowfullscreen="true" 
+    webkitallowfullscreen="true" 
+    mozallowfullscreen="true"  
+    frameborder="0">
+    </iframe>    
+</div>
+
+
+<p><a href="#top">▲ Volver Arriba</a></p>
+
+</div>
+</div>
+
+        </div>
+      </div>
+    </div>
+    
+  </div>
+
+  <div class="sub-footer">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <div class="sub-footer-inner">
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+  
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/scripts.min.1237ff71925bb8625c97a9af8db4c54525258bedfd7c47493daaff723bea755e.js"></script>
+  
+
+  
+  
+  
+    
+  
+
+
+</body>
+
+</html>
