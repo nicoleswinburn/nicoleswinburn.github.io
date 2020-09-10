@@ -58,20 +58,47 @@
     
     <item>
       <title>06 Materiales y Experimentación (Grupal)</title>
-      <link>https://nicoleswinburn.github.io/docs/06-materiales-y-experimentaci%C3%B3n-grupal/</link>
+      <link>https://nicoleswinburn.github.io/docs/06-materiales-y-experimentaci%C3%B3n/</link>
       <pubDate>Wed, 17 Jun 2020 19:30:08 +1000</pubDate>
       
-      <guid>https://nicoleswinburn.github.io/docs/06-materiales-y-experimentaci%C3%B3n-grupal/</guid>
+      <guid>https://nicoleswinburn.github.io/docs/06-materiales-y-experimentaci%C3%B3n/</guid>
       <description>Investigación de materiales y experimentación con estos.</description>
     </item>
     
     <item>
-      <title>07 Moldes 3D Macetero (Grupal)</title>
+      <title>07 Moldes 3D Macetero</title>
       <link>https://nicoleswinburn.github.io/docs/07-moldes-3d-macetero-grupal/</link>
       <pubDate>Wed, 17 Jun 2020 19:30:08 +1000</pubDate>
       
       <guid>https://nicoleswinburn.github.io/docs/07-moldes-3d-macetero-grupal/</guid>
       <description>Modelado 3D del molde en positivo y negativo para poder obtener un macetero. Y luego, un nuevo intento, después del feedback.</description>
+    </item>
+    
+    <item>
+      <title>08 Examen - Experimentación</title>
+      <link>https://nicoleswinburn.github.io/docs/08-examen-experimentaci%C3%B3n/</link>
+      <pubDate>Wed, 17 Jun 2020 19:30:08 +1000</pubDate>
+      
+      <guid>https://nicoleswinburn.github.io/docs/08-examen-experimentaci%C3%B3n/</guid>
+      <description>Experimentación de materiales con la mezcla final.</description>
+    </item>
+    
+    <item>
+      <title>09 Examen - Allelo</title>
+      <link>https://nicoleswinburn.github.io/docs/09-examen-allelo/</link>
+      <pubDate>Wed, 17 Jun 2020 19:30:08 +1000</pubDate>
+      
+      <guid>https://nicoleswinburn.github.io/docs/09-examen-allelo/</guid>
+      <description>Presentación de nuestro producto. Contenedor con los resultados, formato de producto, haciendo énfasis en los alcances del producto final. (Fotos, renders, fotomontajes, planimetrías, guías de uso, manuales, marca, gráficas, logo etc…)</description>
+    </item>
+    
+    <item>
+      <title>10 Examen - Bonus</title>
+      <link>https://nicoleswinburn.github.io/docs/10-examen-bonus/</link>
+      <pubDate>Wed, 17 Jun 2020 19:30:08 +1000</pubDate>
+      
+      <guid>https://nicoleswinburn.github.io/docs/10-examen-bonus/</guid>
+      <description>BONUS Diseño y registro del proceso CNC, de una pieza que complementa las funciones del macetero. En este caso, platito para el agua (registro del proceso estilo tutorial, renders, fotomontajes, planimetrías).</description>
     </item>
     
   </channel>
